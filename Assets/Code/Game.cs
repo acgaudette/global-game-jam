@@ -34,6 +34,12 @@ namespace Gameplay {
             rent = tenants.Count > 0 ?
                 startingRent / tenants.Count : startingRent;
 
+            // Game over
+            if (timer < 0.0) {
+                timerText.text = "GAME OVER";
+                return;
+            }
+
             if (deciding) {
                 // Decision: YES trigger
                 if (Input.GetKeyDown(KeyCode.Return)) {
