@@ -11,6 +11,8 @@ namespace Gameplay {
 
         public float timeLimit = 60;
         public float timer;
+        public uint month = 1;
+        public bool gameOver = false;
 
         public bool deciding = false;
         public float decidePause = 0.25f;
@@ -19,7 +21,10 @@ namespace Gameplay {
         public TenantData proposal;
 
         public uint startingRent = 10000;
+        public uint startingCash = 10000;
+        public float rentIncreaseFactor = 1.5f;
         public float rent;
+        public float cash;
 
         public Text scoreText;
         public Text timerText;
@@ -29,6 +34,7 @@ namespace Gameplay {
         void Awake() {
             timer = timeLimit;
             rent = startingRent;
+            cash = startingCash;
             proposalText.text = "";
             decisionText.text = "";
         }
@@ -50,24 +56,23 @@ namespace Gameplay {
                 rent = startingRent;
             }
 
-            // Reset game
-            if (Input.GetKeyDown(KeyCode.R)) {
-                timer = timeLimit;
+            if (timer < 0.0) {
+                ++month;
+                //rent = startingRent * (rentIncreaseFactor * month);
+                cash = startingCash * Mathf.Pow(0.9f, month);
 
-                foreach (var tenant in tenants) {
-                    tenant.Kick();
+                if (cash >= rent) {
+                    Debug.Log("Rent paid");
                 }
 
-                tenants.Clear();
+                // Game over
+                else {
+                    timerText.text = "GAME OVER";
+                    Debug.Log("Game over");
+                    gameOver = true;
+                }
 
-                Debug.Log("Restarted game");
-            }
-
-            // Game over
-            if (timer < 0.0) {
-                timerText.text = "GAME OVER";
-                Debug.Log("Game over");
-                return;
+                timer = timeLimit;
             }
 
             if (deciding) {
