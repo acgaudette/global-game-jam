@@ -107,8 +107,12 @@ namespace Gameplay
 
             // Debug label
             var label = transform.GetChild(0).GetComponent<TextMesh>();
-            label.text = data.valueFactor + "x";
-                //+ "\n" + (data.traits[0].like ? ":)" : ":(");
+            if (data.valueFactor > 1) {
+                label.text = data.valueFactor + "x";
+                    //+ "\n" + (data.traits[0].like ? ":)" : ":(");
+            } else {
+                label.text = "";
+            }
         }
 
         void OnCollisionEnter(Collision collision)
