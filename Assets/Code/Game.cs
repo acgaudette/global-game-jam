@@ -14,6 +14,7 @@ namespace Gameplay {
 
         public bool deciding = false;
         public float decidePause = 0.25f;
+        public float decidePunishPause = 1;
         public float decidingTimer;
         public TenantData proposal;
 
@@ -85,6 +86,9 @@ namespace Gameplay {
                             tenants.Remove(kick);
                             tenant.Kick();
                         }
+
+                        // Punish with larger timer
+                        decidingTimer = decidePunishPause;
                     }
                 }
 
