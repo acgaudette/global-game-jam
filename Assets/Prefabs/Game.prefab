@@ -53,7 +53,12 @@ MonoBehaviour:
   timeLimit: 60
   timer: 0
   deciding: 0
-  decidePause: 0.5
+  decidePause: 0.25
   decidingTimer: 0
+  proposal:
+    traits: []
+  startingRent: 10000
+  rent: 0
   scoreText: {fileID: 0}
   timerText: {fileID: 0}
+  proposalText: {fileID: 0}
