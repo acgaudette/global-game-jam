@@ -50,6 +50,12 @@ MonoBehaviour:
   wanderRange: 10
   waitTime: 5
   speed: 2
+  minX: -10
+  maxX: 11.4
+  minY: -6
+  maxY: -1
+  minZ: 0
+  maxZ: 7
 --- !u!212 &2399925898005599489
 SpriteRenderer:
   m_ObjectHideFlags: 0

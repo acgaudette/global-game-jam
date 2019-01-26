@@ -12,11 +12,18 @@ namespace Gameplay
         //Fixed locations
         GameObject entry;
         GameObject exit;
-        GameObject house;
 
         public float wanderRange;
         public float waitTime;
         public float speed;
+
+        //Floor bounds
+        public float minX;
+        public float maxX;
+        public float minY;
+        public float maxY;
+        public float minZ;
+        public float maxZ;
 
         bool isInHouse;
 
@@ -25,7 +32,7 @@ namespace Gameplay
             movementQueue = new List<Vector3>();
             entry = GameObject.FindGameObjectWithTag("Entry");
             exit = GameObject.FindGameObjectWithTag("Exit");
-            house = GameObject.FindGameObjectWithTag("Floor");
+            isInHouse = true;
         }
 
         public void Wander()
@@ -36,8 +43,10 @@ namespace Gameplay
         // Kick the tenant out of the house
         public void Kick()
         {
-            // TODO: animate and then destroy
-            Destroy(gameObject);
+            movementQueue.Clear();
+            movementQueue.Add(entry.transform.position);
+            movementQueue.Add(exit.transform.position);
+            isInHouse = false;
         }
 
         public void Enter()
@@ -46,47 +55,47 @@ namespace Gameplay
             isInHouse = true;
         }
 
-        public void Exit()
-        {
-            movementQueue.Clear();
-            movementQueue.Add(entry.transform.position);
-            movementQueue.Add(exit.transform.position);
-        }
-
         IEnumerator RandomMovement()
         {
             while (isInHouse)
             {
                 //Might want to offest by height of character, location at feet;
-                Vector3 target = new Vector3(house.transform.position.x + Random.Range(-house.transform.localScale.x, house.transform.localScale.x) / 2, house.transform.position.y + Random.Range(-house.transform.localScale.y, house.transform.localScale.y) / 2);
-                Debug.Log(target);
+                float x = Random.Range(minX, maxX);
+                float y = Random.Range(minY, maxY);
+                float z = y / (maxY - minY) * (maxZ - minZ);
+                Vector3 target = new Vector3(x, y + transform.localScale.y / 2, z);
                 Vector3 destination = target;
-
                 float d = Random.Range(1, wanderRange);
                 if (Vector3.Distance(target, transform.position) > d)
                 {
                     destination = transform.position + (target - transform.position).normalized * d;
                 }
+                Debug.Log(destination);
                 movementQueue.Add(destination);
                 yield return new WaitForSeconds(Random.Range(1, waitTime));
             }
         }
         void Update()
         {
-            if (movementQueue.Count == 0)
-            {
-                return;
-            }
+            if (movementQueue.Count > 0)
+            {   
             //Remove destination if arrived
-            else if (Vector3.Distance(transform.position, movementQueue[0]) < 0.01f)
-            {
-
-                movementQueue.RemoveAt(0);
+                if (Vector3.Distance(transform.position, movementQueue[0]) < 0.01f)
+                { 
+                    movementQueue.RemoveAt(0);
+                }
+                //Movement
+                else
+                {
+                    transform.position = Vector3.MoveTowards(transform.position, movementQueue[0], speed * Time.deltaTime);
+                }
             }
-            //Movement
             else
             {
-                transform.position = Vector3.MoveTowards(transform.position, movementQueue[0], speed * Time.deltaTime);
+                if (!isInHouse)
+                {
+                    Destroy(gameObject);
+                }
             }
         }
     }
