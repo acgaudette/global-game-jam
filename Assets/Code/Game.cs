@@ -57,6 +57,7 @@ namespace Gameplay {
 
                     tenant.data = proposal;
                     tenants.Add(tenant);
+                    tenant.Wander();
 
                     // UI
                     proposalText.text = "ACCEPT!";
