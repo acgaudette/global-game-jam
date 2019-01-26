@@ -59,7 +59,7 @@ namespace Gameplay
             {
                 //Might want to offest by height of character, location at feet;
                 Vector3 target = new Vector3(house.transform.position.x + Random.Range(-house.transform.localScale.x, house.transform.localScale.x) / 2, house.transform.position.y + Random.Range(-house.transform.localScale.y, house.transform.localScale.y) / 2);
-                Debug.Log(target);
+                //Debug.Log(target);
                 Vector3 destination = target;
 
                 float d = Random.Range(1, wanderRange);
