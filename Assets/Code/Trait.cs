@@ -15,5 +15,6 @@ namespace Gameplay {
     [System.Serializable]
     public class TraitData {
         public string title;
+        public Color debugColor = Color.white;
     }
 }
