@@ -13,7 +13,7 @@ namespace Gameplay {
         public float timer;
 
         public bool deciding = false;
-        public float decidePause = 0.5f;
+        public float decidePause = 0.25f;
         public float decidingTimer;
         public TenantData proposal;
 
