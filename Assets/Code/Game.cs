@@ -37,8 +37,18 @@ namespace Gameplay {
             /* Logic */
 
             timer -= Time.deltaTime;
-            rent = tenants.Count > 0 ?
-                startingRent / tenants.Count : startingRent;
+
+            if (tenants.Count > 0) {
+                var sum = 0f;
+
+                foreach (var tenant in tenants) {
+                    sum += tenant.data.valueFactor;
+                }
+
+                rent = startingRent / sum;
+            } else {
+                rent = startingRent;
+            }
 
             // Reset game
             if (Input.GetKeyDown(KeyCode.R)) {
@@ -162,8 +172,9 @@ namespace Gameplay {
             TraitData data = traitPool[randomIndex];
             bool like = Random.value > 0.5;
             Trait randomTrait = new Trait(data, like);
+            float factor = Random.Range(1, 3);
 
-            TenantData proposal = new TenantData(randomTrait);
+            TenantData proposal = new TenantData(randomTrait, factor);
             return proposal;
         }
     }
