@@ -730,6 +730,7 @@ RectTransform:
   - {fileID: 163273975}
   - {fileID: 1354716755}
   - {fileID: 1607335144}
+  - {fileID: 1700702971}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -999,6 +1000,85 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1700702970
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1700702971}
+  - component: {fileID: 1700702973}
+  - component: {fileID: 1700702972}
+  m_Layer: 5
+  m_Name: Decision
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1700702971
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700702970}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.9999998, y: 0.9999998, z: 0.9999998}
+  m_Children: []
+  m_Father: {fileID: 1430552632}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 32, y: -70}
+  m_SizeDelta: {x: 32, y: 32}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1700702972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700702970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.5614497, g: 1, b: 0.19999999, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 50c52e60beccda943b2d39dbfbb7b914, type: 3}
+    m_FontSize: 32
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 128
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: DECISION
+--- !u!222 &1700702973
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700702970}
+  m_CullTransparentMesh: 0
 --- !u!1 &1773292658
 GameObject:
   m_ObjectHideFlags: 0
@@ -1222,11 +1302,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
         type: 3}
-      propertyPath: traitPool.Array.size
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
-        type: 3}
       propertyPath: spawnPoint
       value: 
       objectReference: {fileID: 1692152781}
@@ -1247,58 +1322,8 @@ PrefabInstance:
       objectReference: {fileID: 1607335145}
     - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
         type: 3}
-      propertyPath: traitPool.Array.data[2].title
-      value: dinosaurs
-      objectReference: {fileID: 0}
-    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
-        type: 3}
-      propertyPath: traitPool.Array.data[3].title
-      value: illuminati
-      objectReference: {fileID: 0}
-    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
-        type: 3}
-      propertyPath: traitPool.Array.data[4].title
-      value: blood
-      objectReference: {fileID: 0}
-    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
-        type: 3}
-      propertyPath: traitPool.Array.data[5].title
-      value: skeletons
-      objectReference: {fileID: 0}
-    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
-        type: 3}
-      propertyPath: traitPool.Array.data[6].title
-      value: the L train
-      objectReference: {fileID: 0}
-    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
-        type: 3}
-      propertyPath: traitPool.Array.data[7].title
-      value: teeth
-      objectReference: {fileID: 0}
-    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
-        type: 3}
-      propertyPath: traitPool.Array.data[8].title
-      value: VR
-      objectReference: {fileID: 0}
-    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
-        type: 3}
-      propertyPath: traitPool.Array.data[9].title
-      value: hypebeast
-      objectReference: {fileID: 0}
-    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
-        type: 3}
-      propertyPath: traitPool.Array.data[10].title
-      value: snakes
-      objectReference: {fileID: 0}
-    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
-        type: 3}
-      propertyPath: traitPool.Array.data[11].title
-      value: fish
-      objectReference: {fileID: 0}
-    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
-        type: 3}
-      propertyPath: traitPool.Array.data[12].title
-      value: memes
-      objectReference: {fileID: 0}
+      propertyPath: decisionText
+      value: 
+      objectReference: {fileID: 1700702972}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d97870e1f2bacaef0a02add1616e17a1, type: 3}
