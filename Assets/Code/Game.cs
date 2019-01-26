@@ -86,7 +86,7 @@ namespace Gameplay {
                         // Kick conflicts
                         foreach (var kick in kickList) {
                             tenants.Remove(kick);
-                            tenant.Kick();
+                            kick.Kick();
                         }
 
                         // Punish with larger timer
