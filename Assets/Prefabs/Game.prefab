@@ -50,9 +50,9 @@ MonoBehaviour:
   - title: fish
     debugColor: {r: 0.17799926, g: 0.344155, b: 0.9433962, a: 1}
   - title: aliens
-    debugColor: {r: 0.3962264, g: 0.98719096, b: 1, a: 1}
+    debugColor: {r: 0.29049483, g: 0.8936768, b: 0.9056604, a: 1}
   - title: dinosaurs
-    debugColor: {r: 0, g: 1, b: 0.173491, a: 1}
+    debugColor: {r: 0, g: 0.8113208, b: 0.1399926, a: 1}
   - title: illuminati
     debugColor: {r: 0.8427139, g: 1, b: 0.24528301, a: 1}
   - title: blood
@@ -62,7 +62,7 @@ MonoBehaviour:
   - title: the L train
     debugColor: {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 1}
   - title: teeth
-    debugColor: {r: 1, g: 1, b: 1, a: 1}
+    debugColor: {r: 1, g: 0.3207547, b: 0.6599492, a: 1}
   - title: VR
     debugColor: {r: 0, g: 0, b: 0, a: 1}
   - title: hypebeast
@@ -72,7 +72,7 @@ MonoBehaviour:
   - title: memes
     debugColor: {r: 0.6320754, g: 0.33392665, b: 0.621516, a: 1}
   tenants: []
-  timeLimit: 60
+  timeLimit: 30
   timer: 0
   deciding: 0
   decidePause: 0.25
@@ -80,8 +80,10 @@ MonoBehaviour:
   decidingTimer: 0
   proposal:
     traits: []
+    valueFactor: 0
   startingRent: 10000
   rent: 0
   scoreText: {fileID: 0}
   timerText: {fileID: 0}
   proposalText: {fileID: 0}
+  decisionText: {fileID: 0}
