@@ -105,7 +105,7 @@ namespace Gameplay {
 
             if (deciding) {
                 // Decision: YES trigger
-                if (Input.GetKeyDown(KeyCode.Return)) {
+                if (Input.GetKeyDown(KeyCode.RightArrow)) {
                     // Create new tenant
                     var tenant = GameObject.Instantiate(
                         tenantPrefab,
@@ -164,7 +164,7 @@ namespace Gameplay {
                 }
 
                 // Decision: NO trigger
-                if (Input.GetKeyDown(KeyCode.Backspace)) {
+                if (Input.GetKeyDown(KeyCode.LeftArrow)) {
                     // UI
                     proposalText.text = "REJECT!";
                     decisionText.text = "";
