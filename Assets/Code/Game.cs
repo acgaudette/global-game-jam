@@ -40,6 +40,19 @@ namespace Gameplay {
             rent = tenants.Count > 0 ?
                 startingRent / tenants.Count : startingRent;
 
+            // Reset game
+            if (Input.GetKeyDown(KeyCode.R)) {
+                timer = timeLimit;
+
+                foreach (var tenant in tenants) {
+                    tenant.Kick();
+                }
+
+                tenants.Clear();
+
+                Debug.Log("Restarted game");
+            }
+
             // Game over
             if (timer < 0.0) {
                 timerText.text = "GAME OVER";
