@@ -26,6 +26,7 @@ namespace Gameplay {
 
         void Awake() {
             timer = timeLimit;
+            rent = startingRent;
             proposalText.text = "";
         }
 
