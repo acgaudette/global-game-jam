@@ -172,7 +172,7 @@ namespace Gameplay {
             TraitData data = traitPool[randomIndex];
             bool like = Random.value > 0.5;
             Trait randomTrait = new Trait(data, like);
-            float factor = Random.Range(1, 3);
+            float factor = Random.Range(1, 4);
 
             TenantData proposal = new TenantData(randomTrait, factor);
             return proposal;
