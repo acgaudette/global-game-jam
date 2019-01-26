@@ -28,6 +28,7 @@ namespace Gameplay {
         public float cash;
 
         // Random generation
+        public uint startingCap = 2;
         public uint maxFactor = 8;
         public AnimationCurve factorCurve;
 
@@ -212,7 +213,8 @@ namespace Gameplay {
 
         // Procedurally-generate new tenant proposal
         TenantData GenerateProposal() {
-            int randomIndex = Random.Range(0, traitPool.Count);
+            int limit = Mathf.Min(traitPool.Count, (int)(startingCap * month));
+            int randomIndex = Random.Range(0, limit);
             TraitData data = traitPool[randomIndex];
             bool like = Random.value > 0.5;
             Trait randomTrait = new Trait(data, like);
