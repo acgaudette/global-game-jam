@@ -126,11 +126,13 @@ namespace Gameplay
     {
         // Note: class is hardcoded for only a single trait
         public List<Trait> traits;
+        public float valueFactor;
 
-        public TenantData(Trait trait)
+        public TenantData(Trait trait, float valueFactor)
         {
             traits = new List<Trait>();
             traits.Add(trait);
+            this.valueFactor = valueFactor;
         }
 
         public bool Conflicts(TenantData other)
@@ -143,7 +145,8 @@ namespace Gameplay
         {
             var trait = traits[0];
             return (trait.like ? "Likes" : "Hates")
-                + " " + trait.data.title;
+                + " " + trait.data.title
+                + "\nValue: " + valueFactor + "x";
         }
     }
 }
