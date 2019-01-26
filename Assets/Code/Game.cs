@@ -47,6 +47,19 @@ namespace Gameplay {
                 return;
             }
 
+            // Reset game
+            if (Input.GetKeyDown(KeyCode.R)) {
+                timer = timeLimit;
+
+                foreach (var tenant in tenants) {
+                    tenant.Kick();
+                }
+
+                tenants.Clear();
+
+                Debug.Log("Restarted game");
+            }
+
             if (deciding) {
                 // Decision: YES trigger
                 if (Input.GetKeyDown(KeyCode.Return)) {
