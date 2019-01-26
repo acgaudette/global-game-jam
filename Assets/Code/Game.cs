@@ -26,6 +26,10 @@ namespace Gameplay {
         public float rent;
         public float cash;
 
+        // Random generation
+        public uint maxFactor = 8;
+        public AnimationCurve factorCurve;
+
         public Text scoreText;
         public Text timerText;
         public Text proposalText;
@@ -211,7 +215,9 @@ namespace Gameplay {
             TraitData data = traitPool[randomIndex];
             bool like = Random.value > 0.5;
             Trait randomTrait = new Trait(data, like);
-            float factor = Random.Range(1, 4);
+            //float factor = Random.Range(1, maxFactor + 1);
+            float factor = (maxFactor) * factorCurve.Evaluate(Random.value) + 1;
+            factor = Mathf.Round(factor);
 
             TenantData proposal = new TenantData(randomTrait, factor);
             return proposal;
