@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 
 namespace Gameplay {
+    // Class for actual ingame instance of a tenant
     public class Tenant: MonoBehaviour {
         public TenantData data;
 
@@ -12,6 +13,7 @@ namespace Gameplay {
         }
     }
 
+    // Class for tenant data, e.g. for not-yet-rendered tenant proposals
     [System.Serializable]
     public class TenantData {
         // Note: class is hardcoded for only a single trait
