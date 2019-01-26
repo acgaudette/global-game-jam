@@ -24,11 +24,13 @@ namespace Gameplay {
         public Text scoreText;
         public Text timerText;
         public Text proposalText;
+        public Text decisionText;
 
         void Awake() {
             timer = timeLimit;
             rent = startingRent;
             proposalText.text = "";
+            decisionText.text = "";
         }
 
         void Update() {
@@ -57,12 +59,15 @@ namespace Gameplay {
                     );
 
                     tenant.data = proposal;
+                    tenant.GetComponent<SpriteRenderer>().color
+                        = tenant.data.traits[0].data.debugColor;
                     tenants.Add(tenant);
                     tenant.Enter();
                     tenant.Wander();
 
                     // UI
                     proposalText.text = "ACCEPT!";
+                    decisionText.text = "";
 
                     deciding = false;
                     Debug.Log("Accepted tenant");
@@ -103,6 +108,7 @@ namespace Gameplay {
                 if (Input.GetKeyDown(KeyCode.Backspace)) {
                     // UI
                     proposalText.text = "REJECT!";
+                    decisionText.text = "";
 
                     deciding = false;
                     Debug.Log("Rejected tenant");
@@ -118,8 +124,9 @@ namespace Gameplay {
                     decidingTimer = decidePause;
 
                     // UI
-                    proposalText.text = "Proposal:\n"
-                        + proposal.ToString();
+                    proposalText.text = "Proposal:";
+                    decisionText.text = proposal.ToString();
+                    decisionText.color = proposal.traits[0].data.debugColor;
 
                     deciding = true;
                     Debug.Log("New proposal");
