@@ -218,7 +218,10 @@ namespace Gameplay {
             Trait randomTrait = new Trait(data, like);
             //float factor = Random.Range(1, maxFactor + 1);
             float factor = (maxFactor) * factorCurve.Evaluate(Random.value) + 1;
-            factor = Mathf.Round(factor);
+            factor = Mathf.Floor(factor);
+            if (factor % 2 == 0) {
+                factor--;
+            }
 
             TenantData proposal = new TenantData(randomTrait, factor);
             return proposal;
