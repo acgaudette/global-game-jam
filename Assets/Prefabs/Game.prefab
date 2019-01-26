@@ -49,11 +49,23 @@ MonoBehaviour:
   traitPool:
   - title: fish
   - title: aliens
+  - title: dinosaurs
+  - title: illuminati
+  - title: blood
+  - title: skeletons
+  - title: the L train
+  - title: teeth
+  - title: VR
+  - title: hypebeast
+  - title: snakes
+  - title: fish
+  - title: memes
   tenants: []
   timeLimit: 60
   timer: 0
   deciding: 0
   decidePause: 0.25
+  decidePunishPause: 1
   decidingTimer: 0
   proposal:
     traits: []
