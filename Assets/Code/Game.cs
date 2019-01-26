@@ -66,6 +66,7 @@ namespace Gameplay {
             }
 
             if (gameOver) {
+                timerText.text = "GAME OVER";
                 return;
             }
 
@@ -94,7 +95,6 @@ namespace Gameplay {
 
                 // Game over
                 else {
-                    timerText.text = "GAME OVER";
                     Debug.Log("Game over");
                     gameOver = true;
                 }
