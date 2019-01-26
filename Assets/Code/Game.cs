@@ -23,6 +23,7 @@ namespace Gameplay {
         public uint startingRent = 10000;
         public uint startingCash = 10000;
         public float rentIncreaseFactor = 1.5f;
+        public float cashDecreaseFactor = 0.8f;
         public float rent;
         public float cash;
 
@@ -87,7 +88,7 @@ namespace Gameplay {
             if (timer < 0.0) {
                 ++month;
                 //rent = startingRent * (rentIncreaseFactor * month);
-                cash = startingCash * Mathf.Pow(0.9f, month);
+                cash = startingCash * Mathf.Pow(cashDecreaseFactor, month);
 
                 if (cash >= rent) {
                     Debug.Log("Rent paid");
