@@ -108,7 +108,9 @@ namespace Gameplay {
 
                     // There was a conflict
                     if (kickList.Count > 0) {
-                        kickList.Add(tenant);
+                        // Don't kick new tenant; keep them
+                        //kickList.Add(tenant);
+
                         Debug.Log(
                             "Conflict with " + kickList.Count + " residents!"
                         );
