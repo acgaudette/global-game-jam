@@ -104,6 +104,11 @@ namespace Gameplay
                     Destroy(gameObject);
                 }
             }
+
+            // Debug label
+            var label = transform.GetChild(0).GetComponent<TextMesh>();
+            label.text = data.valueFactor + "x"
+                + "\n" + (data.traits[0].like ? ":)" : ":(");
         }
 
         void OnCollisionEnter(Collision collision)
