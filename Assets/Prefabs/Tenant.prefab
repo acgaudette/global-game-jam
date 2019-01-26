@@ -47,6 +47,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data:
     traits: []
+  wanderRange: 10
+  waitTime: 5
+  speed: 2
 --- !u!212 &2399925898005599489
 SpriteRenderer:
   m_ObjectHideFlags: 0

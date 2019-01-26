@@ -58,6 +58,7 @@ namespace Gameplay {
 
                     tenant.data = proposal;
                     tenants.Add(tenant);
+                    tenant.Enter();
                     tenant.Wander();
 
                     // UI
