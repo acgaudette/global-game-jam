@@ -4,6 +4,12 @@ using System.Collections.Generic;
 namespace Gameplay {
     public class Tenant: MonoBehaviour {
         public TenantData data;
+
+        // Kick the tenant out of the house
+        public void Kick() {
+            // TODO: animate and then destroy
+            Destroy(gameObject);
+        }
     }
 
     [System.Serializable]
