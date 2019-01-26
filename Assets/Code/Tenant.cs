@@ -43,7 +43,7 @@ namespace Gameplay
         // Kick the tenant out of the house
         public void Kick()
         {
-            movementQueue.Clear();
+             movementQueue.Clear();
             movementQueue.Add(entry.transform.position);
             movementQueue.Add(exit.transform.position);
             isInHouse = false;
@@ -60,7 +60,10 @@ namespace Gameplay
             while (isInHouse)
             {
                 //Might want to offest by height of character, location at feet;
-
+                float x = Random.Range(minX, maxX);
+                float y = Random.Range(minY, maxY);
+                float z = y / (maxY - minY) * (maxZ - minZ);
+                Vector3 target = new Vector3(x, y + transform.localScale.y / 2, z);
                 Vector3 destination = target;
                 float d = Random.Range(1, wanderRange);
                 if (Vector3.Distance(target, transform.position) > d)
