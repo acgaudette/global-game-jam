@@ -22,6 +22,11 @@ namespace Gameplay {
             traits.Add(trait);
         }
 
+        public bool Conflicts(TenantData other) {
+            return traits[0].data.title == other.traits[0].data.title
+                && traits[0].like != other.traits[0].like;
+        }
+
         public override string ToString() {
             var trait = traits[0];
             return (trait.like ? "Likes" : "Hates")
