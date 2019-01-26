@@ -80,9 +80,9 @@ MonoBehaviour:
   - title: snakes
     debugColor: {r: 0.7264151, g: 0.5123476, b: 0.35635456, a: 1}
     hates: memes
-  - title: memes
+  - title: "\x13\x13memes"
     debugColor: {r: 0.6320754, g: 0.33392665, b: 0.621516, a: 1}
-    hates: "snakes\x10"
+    hates: snakes
   tenants: []
   timeLimit: 30
   timer: 0
