@@ -16,6 +16,7 @@ obj/
 *.pidb
 *.suo
 /*.sln
+/*.vs
 *.user
 *.unityproj
 *.booproj
