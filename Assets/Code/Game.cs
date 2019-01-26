@@ -47,6 +47,7 @@ namespace Gameplay {
             if (deciding) {
                 // Decision: YES trigger
                 if (Input.GetKeyDown(KeyCode.Return)) {
+                    // Create new tenant
                     var tenant = GameObject.Instantiate(
                         tenantPrefab,
                         spawnPoint.position,
