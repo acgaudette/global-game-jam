@@ -30,6 +30,7 @@ namespace Gameplay {
         public Text timerText;
         public Text proposalText;
         public Text decisionText;
+        public Text extraText;
 
         void Awake() {
             timer = timeLimit;
@@ -96,6 +97,7 @@ namespace Gameplay {
                     // UI
                     proposalText.text = "ACCEPT!";
                     decisionText.text = "";
+                    extraText.text = "";
 
                     deciding = false;
                     Debug.Log("Accepted tenant");
@@ -139,6 +141,7 @@ namespace Gameplay {
                     // UI
                     proposalText.text = "REJECT!";
                     decisionText.text = "";
+                    extraText.text = "";
 
                     deciding = false;
                     Debug.Log("Rejected tenant");
@@ -157,6 +160,11 @@ namespace Gameplay {
                     proposalText.text = "Proposal:";
                     decisionText.text = proposal.ToString();
                     decisionText.color = proposal.traits[0].data.debugColor;
+                    extraText.text = "(Hates "
+                        + proposal.traits[0].data.hates + ")";
+                    extraText.color = traitPool.Find(
+                        x => x.title == proposal.traits[0].data.hates
+                    ).debugColor;
 
                     deciding = true;
                     Debug.Log("New proposal");
@@ -165,8 +173,10 @@ namespace Gameplay {
 
             /* UI */
 
-            scoreText.text = "$" + rent.ToString("N0")
-                + "/mo.";
+            scoreText.text = ""
+                + "Month " + month + ": $" + cash.ToString("N0")
+                + "\n"
+                + "$" + rent.ToString("N0") + "/mo.";
 
             int seconds = Mathf.FloorToInt(timer);
             float remainder = Mathf.Round((timer % 1) * 100);
