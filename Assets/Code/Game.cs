@@ -61,6 +61,31 @@ namespace Gameplay {
 
                     deciding = false;
                     Debug.Log("Accepted tenant");
+
+                    /* Handle mismatch */
+
+                    var kickList = new List<Tenant>();
+
+                    // Search for conflicts with new tenant
+                    foreach (var resident in tenants) {
+                        if (tenant.data.Conflicts(resident.data)) {
+                            kickList.Add(resident);
+                        }
+                    }
+
+                    // There was a conflict
+                    if (kickList.Count > 0) {
+                        kickList.Add(tenant);
+                        Debug.Log(
+                            "Conflict with " + kickList.Count + " residents!"
+                        );
+
+                        // Kick conflicts
+                        foreach (var kick in kickList) {
+                            tenants.Remove(kick);
+                            tenant.Kick();
+                        }
+                    }
                 }
 
                 // Decision: NO trigger
