@@ -147,6 +147,7 @@ namespace Gameplay
                 && traits[0].like != other.traits[0].like;
             */
 
+            // Undirected
             return traits[0].data.hates == other.traits[0].data.title
                 || traits[0].data.title == other.traits[0].data.hates;
         }
