@@ -54,7 +54,7 @@ MonoBehaviour:
   waitTime: 5
   speed: 4
   exitSpeed: 10
-  minX: -10
+  minX: -7
   maxX: 11.4
   minY: -6
   maxY: -1
