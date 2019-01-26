@@ -16,6 +16,7 @@ namespace Gameplay
         public float wanderRange;
         public float waitTime;
         public float speed;
+        public float exitSpeed;
 
         //Floor bounds
         public float minX;
@@ -43,7 +44,7 @@ namespace Gameplay
         // Kick the tenant out of the house
         public void Kick()
         {
-             movementQueue.Clear();
+            movementQueue.Clear();
             movementQueue.Add(entry.transform.position);
             movementQueue.Add(exit.transform.position);
             isInHouse = false;
@@ -87,7 +88,16 @@ namespace Gameplay
                 //Movement
                 else
                 {
-                    transform.position = Vector3.MoveTowards(transform.position, movementQueue[0], speed * Time.deltaTime);
+                    float s = 0;
+                    if (isInHouse)
+                    {
+                        s = speed;
+                    }
+                    else
+                    {
+                        s = exitSpeed;
+                    }
+                    transform.position = Vector3.MoveTowards(transform.position, movementQueue[0], s * Time.deltaTime);
                 }
             }
             else
@@ -96,6 +106,14 @@ namespace Gameplay
                 {
                     Destroy(gameObject);
                 }
+            }
+        }
+
+        void OnCollisionEnter(Collision collision)
+        {
+            if (collision.gameObject.CompareTag("Tenant"))
+            {
+                
             }
         }
     }
