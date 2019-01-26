@@ -101,6 +101,7 @@ MonoBehaviour:
   cashDecreaseFactor: 0.8
   rent: 0
   cash: 0
+  startingCap: 2
   maxFactor: 7
   factorCurve:
     serializedVersion: 2
