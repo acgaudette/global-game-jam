@@ -48,18 +48,29 @@ MonoBehaviour:
   spawnPoint: {fileID: 0}
   traitPool:
   - title: fish
+    debugColor: {r: 0.17799926, g: 0.344155, b: 0.9433962, a: 1}
   - title: aliens
+    debugColor: {r: 0.3962264, g: 0.98719096, b: 1, a: 1}
   - title: dinosaurs
+    debugColor: {r: 0, g: 1, b: 0.173491, a: 1}
   - title: illuminati
+    debugColor: {r: 0.8427139, g: 1, b: 0.24528301, a: 1}
   - title: blood
+    debugColor: {r: 0.6981132, g: 0, b: 0, a: 1}
   - title: skeletons
+    debugColor: {r: 0.8490566, g: 0.83594924, b: 0.5366678, a: 1}
   - title: the L train
+    debugColor: {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 1}
   - title: teeth
+    debugColor: {r: 1, g: 1, b: 1, a: 1}
   - title: VR
+    debugColor: {r: 0, g: 0, b: 0, a: 1}
   - title: hypebeast
+    debugColor: {r: 1, g: 0, b: 0, a: 1}
   - title: snakes
-  - title: fish
+    debugColor: {r: 0.7264151, g: 0.5123476, b: 0.35635456, a: 1}
   - title: memes
+    debugColor: {r: 0.6320754, g: 0.33392665, b: 0.621516, a: 1}
   tenants: []
   timeLimit: 60
   timer: 0
