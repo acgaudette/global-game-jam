@@ -16,5 +16,6 @@ namespace Gameplay {
     public class TraitData {
         public string title;
         public Color debugColor = Color.white;
+        public string hates;
     }
 }
