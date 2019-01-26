@@ -17,6 +17,9 @@ namespace Gameplay {
         public float decidingTimer;
         public TenantData proposal;
 
+        public uint startingRent = 10000;
+        public float rent;
+
         public Text scoreText;
         public Text timerText;
 
@@ -28,6 +31,8 @@ namespace Gameplay {
             /* Logic */
 
             timer -= Time.deltaTime;
+            rent = tenants.Count > 0 ?
+                startingRent / tenants.Count : startingRent;
 
             if (deciding) {
                 // Decision: YES trigger
@@ -66,7 +71,8 @@ namespace Gameplay {
 
             /* UI */
 
-            scoreText.text = "Tenants: " + tenants.Count.ToString();
+            scoreText.text = "$" + rent.ToString("N0")
+                + "/mo.";
 
             int seconds = Mathf.FloorToInt(timer);
             float remainder = Mathf.Round((timer % 1) * 100);
