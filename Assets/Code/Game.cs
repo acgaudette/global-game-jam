@@ -76,7 +76,7 @@ namespace Gameplay {
 
             int seconds = Mathf.FloorToInt(timer);
             float remainder = Mathf.Round((timer % 1) * 100);
-            timerText.text = seconds + ":" + remainder;
+            timerText.text = seconds + ":" + remainder.ToString("00");
         }
 
         // Procedurally-generate new tenant proposal
