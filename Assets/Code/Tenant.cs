@@ -5,15 +5,33 @@ namespace Gameplay {
     // Class for actual ingame instance of a tenant
     public class Tenant: MonoBehaviour {
         public TenantData data;
+        public bool wandering = false;
+        public Vector3 target;
 
         public void Wander() {
-            // TODO: stub
+            wandering = true;
         }
 
         // Kick the tenant out of the house
         public void Kick() {
             // TODO: animate and then destroy
             Destroy(gameObject);
+        }
+
+        void Update() {
+            if (wandering) {
+                target = new Vector3(
+                    Random.Range(-8, 8),
+                    Random.Range(-3, 0),
+                    0
+                );
+
+                transform.position = Vector3.Lerp(
+                    transform.position,
+                    target,
+                    Time.deltaTime * 0.2f
+                );
+            }
         }
     }
 
