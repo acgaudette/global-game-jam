@@ -38,10 +38,32 @@ namespace Gameplay {
             cash = startingCash;
             proposalText.text = "";
             decisionText.text = "";
+            extraText.text = "";
         }
 
         void Update() {
             /* Logic */
+
+            // Reset game
+            if (Input.GetKeyDown(KeyCode.R)) {
+                // Reset variables
+                timer = timeLimit;
+                month = 1;
+                gameOver = false;
+
+                // Clear tenants
+                foreach (var tenant in tenants) {
+                    tenant.Kick();
+                }
+
+                tenants.Clear();
+
+                Debug.Log("Restarted game");
+            }
+
+            if (gameOver) {
+                return;
+            }
 
             timer -= Time.deltaTime;
 
