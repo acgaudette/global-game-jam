@@ -11,7 +11,6 @@ namespace Gameplay
         List<Vector3> movementQueue;
         //Fixed locations
         GameObject entry;
-        GameObject exit;
 
         public float wanderRange;
         public float waitTime;
@@ -32,7 +31,6 @@ namespace Gameplay
         {
             movementQueue = new List<Vector3>();
             entry = GameObject.FindGameObjectWithTag("Entry");
-            exit = GameObject.FindGameObjectWithTag("Exit");
             isInHouse = true;
         }
 
@@ -46,7 +44,6 @@ namespace Gameplay
         {
             movementQueue.Clear();
             movementQueue.Add(entry.transform.position);
-            movementQueue.Add(exit.transform.position);
             isInHouse = false;
         }
 
@@ -110,11 +107,16 @@ namespace Gameplay
         }
 
         void OnCollisionEnter(Collision collision)
-        {
+        { 
+            /*
             if (collision.gameObject.CompareTag("Tenant"))
             {
-                
+                if (collision.gameObject.transform.z > transform.z)
+                {
+
+                }
             }
+            */
         }
     }
 
