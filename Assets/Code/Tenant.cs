@@ -68,7 +68,7 @@ namespace Gameplay
                 {
                     destination = transform.position + (target - transform.position).normalized * d;
                 }
-                Debug.Log(destination);
+                //Debug.Log(destination);
                 movementQueue.Add(destination);
                 yield return new WaitForSeconds(Random.Range(1, waitTime));
             }
@@ -107,8 +107,8 @@ namespace Gameplay
 
             // Debug label
             var label = transform.GetChild(0).GetComponent<TextMesh>();
-            label.text = data.valueFactor + "x"
-                + "\n" + (data.traits[0].like ? ":)" : ":(");
+            label.text = data.valueFactor + "x";
+                //+ "\n" + (data.traits[0].like ? ":)" : ":(");
         }
 
         void OnCollisionEnter(Collision collision)
@@ -142,15 +142,24 @@ namespace Gameplay
 
         public bool Conflicts(TenantData other)
         {
+            /*
             return traits[0].data.title == other.traits[0].data.title
                 && traits[0].like != other.traits[0].like;
+            */
+
+            return traits[0].data.hates == other.traits[0].data.title
+                || traits[0].data.title == other.traits[0].data.hates;
         }
 
         public override string ToString()
         {
             var trait = traits[0];
+            /*
             return (trait.like ? "Likes" : "Hates")
                 + " " + trait.data.title
+            */
+            return trait.data.title
+                //+ "\n(Hates " + trait.data.hates + ")";
                 + "\nValue: " + valueFactor + "x";
         }
     }
