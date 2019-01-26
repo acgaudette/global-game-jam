@@ -22,9 +22,11 @@ namespace Gameplay {
 
         public Text scoreText;
         public Text timerText;
+        public Text proposalText;
 
         void Awake() {
             timer = timeLimit;
+            proposalText.text = "";
         }
 
         void Update() {
@@ -53,12 +55,18 @@ namespace Gameplay {
                     tenant.data = proposal;
                     tenants.Add(tenant);
 
+                    // UI
+                    proposalText.text = "ACCEPT!";
+
                     deciding = false;
                     Debug.Log("Accepted tenant");
                 }
 
                 // Decision: NO trigger
                 if (Input.GetKeyDown(KeyCode.Backspace)) {
+                    // UI
+                    proposalText.text = "REJECT!";
+
                     deciding = false;
                     Debug.Log("Rejected tenant");
                 }
@@ -71,7 +79,13 @@ namespace Gameplay {
                 if (decidingTimer < 0) {
                     proposal = GenerateProposal();
                     decidingTimer = decidePause;
+
+                    // UI
+                    proposalText.text = "Proposal:\n"
+                        + proposal.ToString();
+
                     deciding = true;
+                    Debug.Log("New proposal");
                 }
             }
 
