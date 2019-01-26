@@ -1222,6 +1222,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
         type: 3}
+      propertyPath: traitPool.Array.size
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
+        type: 3}
       propertyPath: spawnPoint
       value: 
       objectReference: {fileID: 1692152781}
@@ -1240,5 +1245,60 @@ PrefabInstance:
       propertyPath: proposalText
       value: 
       objectReference: {fileID: 1607335145}
+    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
+        type: 3}
+      propertyPath: traitPool.Array.data[2].title
+      value: dinosaurs
+      objectReference: {fileID: 0}
+    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
+        type: 3}
+      propertyPath: traitPool.Array.data[3].title
+      value: illuminati
+      objectReference: {fileID: 0}
+    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
+        type: 3}
+      propertyPath: traitPool.Array.data[4].title
+      value: blood
+      objectReference: {fileID: 0}
+    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
+        type: 3}
+      propertyPath: traitPool.Array.data[5].title
+      value: skeletons
+      objectReference: {fileID: 0}
+    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
+        type: 3}
+      propertyPath: traitPool.Array.data[6].title
+      value: the L train
+      objectReference: {fileID: 0}
+    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
+        type: 3}
+      propertyPath: traitPool.Array.data[7].title
+      value: teeth
+      objectReference: {fileID: 0}
+    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
+        type: 3}
+      propertyPath: traitPool.Array.data[8].title
+      value: VR
+      objectReference: {fileID: 0}
+    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
+        type: 3}
+      propertyPath: traitPool.Array.data[9].title
+      value: hypebeast
+      objectReference: {fileID: 0}
+    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
+        type: 3}
+      propertyPath: traitPool.Array.data[10].title
+      value: snakes
+      objectReference: {fileID: 0}
+    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
+        type: 3}
+      propertyPath: traitPool.Array.data[11].title
+      value: fish
+      objectReference: {fileID: 0}
+    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
+        type: 3}
+      propertyPath: traitPool.Array.data[12].title
+      value: memes
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d97870e1f2bacaef0a02add1616e17a1, type: 3}
