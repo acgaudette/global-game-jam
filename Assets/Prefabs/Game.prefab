@@ -95,7 +95,7 @@ MonoBehaviour:
   proposal:
     traits: []
     valueFactor: 0
-  startingRent: 10000
+  startingRent: 9000
   startingCash: 500
   rentIncreaseFactor: 1.5
   cashDecreaseFactor: 0.8
