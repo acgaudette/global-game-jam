@@ -90,6 +90,9 @@ namespace Gameplay {
 
                         // Punish with larger timer
                         decidingTimer = decidePunishPause;
+
+                        // UI
+                        proposalText.text = "CONFLICTS!";
                     }
                 }
 
