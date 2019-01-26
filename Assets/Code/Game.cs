@@ -41,6 +41,7 @@ namespace Gameplay {
             // Game over
             if (timer < 0.0) {
                 timerText.text = "GAME OVER";
+                Debug.Log("Game over");
                 return;
             }
 
