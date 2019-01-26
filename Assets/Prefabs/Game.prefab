@@ -84,7 +84,7 @@ MonoBehaviour:
     debugColor: {r: 0.6320754, g: 0.33392665, b: 0.621516, a: 1}
     hates: snakes
   tenants: []
-  timeLimit: 30
+  timeLimit: 20
   timer: 0
   month: 1
   gameOver: 0
