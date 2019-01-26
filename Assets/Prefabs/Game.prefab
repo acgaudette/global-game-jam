@@ -101,7 +101,7 @@ MonoBehaviour:
   cashDecreaseFactor: 0.8
   rent: 0
   cash: 0
-  maxFactor: 8
+  maxFactor: 7
   factorCurve:
     serializedVersion: 2
     m_Curve:
@@ -117,11 +117,11 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 2
-      outSlope: 2
+      inSlope: 2.493227
+      outSlope: 2.493227
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.0222826
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
