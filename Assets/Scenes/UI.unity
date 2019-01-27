@@ -221,7 +221,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -140, y: 0.000015258789}
+  m_AnchoredPosition: {x: -117.2, y: 0.000015258789}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &107704595
@@ -654,7 +654,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 235, y: 0.000015258789}
+  m_AnchoredPosition: {x: 127.9, y: 0.000015258789}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &277212526
@@ -1269,10 +1269,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2300000, guid: ccda710cb932893ff879ffe1e5665121, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 01606666dd3f54493bcc89408973581d, type: 2}
     - target: {fileID: 400002, guid: ccda710cb932893ff879ffe1e5665121, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.1076
@@ -1297,6 +1293,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: ccda710cb932893ff879ffe1e5665121, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 01606666dd3f54493bcc89408973581d, type: 2}
     - target: {fileID: 3300000, guid: ccda710cb932893ff879ffe1e5665121, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -2123,10 +2123,11 @@ MonoBehaviour:
   MoneyBubble: {fileID: 1830301750}
   HostilityBubble: {fileID: 1853807867}
   appearAt: -350
-  loadspeed: 11
-  rejectspeed: 7
-  acceptspeed: 3
-  animationSpeed: 0
+  loadTime: 0.5
+  rejectTime: 0.5
+  acceptTime: 0.5
+  IconDisappearTime: 0.25
+
 --- !u!114 &1369853524
 MonoBehaviour:
   m_ObjectHideFlags: 0
