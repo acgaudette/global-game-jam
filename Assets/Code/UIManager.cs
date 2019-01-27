@@ -42,7 +42,7 @@ namespace Gameplay
 
             Money.text = "$" + cash.ToString();
 
-            Rent.text = "$ " + rent.ToString();
+            Rent.text = "$" + rent.ToString();
             
         }
 

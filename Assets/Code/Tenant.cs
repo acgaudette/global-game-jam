@@ -60,7 +60,7 @@ namespace Gameplay
                 //Might want to offest by height of character, location at feet;
                 float x = Random.Range(minX, maxX);
                 float y = Random.Range(minY, maxY);
-                float z = y / (maxY - minY) * (maxZ - minZ);
+                float z = y / (maxY - minY) * (maxZ - minZ) + minZ;
                 Vector3 target = new Vector3(x, y + transform.localScale.y / 2, z);
                 Vector3 destination = target;
                 float d = Random.Range(1, wanderRange);
