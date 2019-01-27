@@ -9,12 +9,16 @@ public class IconShuffle : MonoBehaviour
     public Transform leftNode;
     public Transform middleNode;
     public Transform rightNode;
-    public bool load;
-    public bool accept;
-    public bool reject;
-    public bool reset;
+    public enum PortraitState
+    {
+        load, accept, reject, reset
+    };
+    PortraitState state;
     public GameObject bubbles;
     public float appearAt;
+    public float loadspeed;
+    public float rejectspeed;
+    public float acceptspeed;
 
     private void Start()
     {
@@ -24,28 +28,26 @@ public class IconShuffle : MonoBehaviour
 
     private void Update()
     {
-        if (load)
+        switch (state)
         {
-            LoadTenant();
+            case PortraitState.load:
+                LoadTenant();
+                break;
+            case PortraitState.accept:
+                AcceptTenant();
+                break;
+            case PortraitState.reject:
+                RejectTenant();
+                break;
+            default:
+                break;
         }
-        if (accept)
-        {
-            AcceptTenant();
-        }
-        if (reject)
-        {
-            RejectTenant();
-        }
-        if (reset)
-        {
-            ResetTenant();
-        }
-
     }
 
     public void LoadTenant()
     {
-        gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, middleNode.position, 8 * Time.deltaTime);
+        state = PortraitState.load;
+        gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, middleNode.position, loadspeed * Time.deltaTime);
         if (gameObject.transform.localPosition.x >= appearAt)
         {
             bubbles.SetActive(true);
@@ -54,24 +56,22 @@ public class IconShuffle : MonoBehaviour
 
     public void AcceptTenant()
     {
-        gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, rightNode.position, 6.5f * Time.deltaTime);
+        state = PortraitState.accept;
+        gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, rightNode.position, acceptspeed * Time.deltaTime);
         bubbles.SetActive(false);
     }
 
     public void RejectTenant()
     {
-        load = false;
-        gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, leftNode.position, 6.5f * Time.deltaTime);
+        state = PortraitState.reject;
+        gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, leftNode.position, rejectspeed * Time.deltaTime);
         bubbles.SetActive(false);
     }
 
     public void ResetTenant ()
     {
-        load = false;
-        accept = false;
-        reject = false;
+        state = PortraitState.reset;
         gameObject.transform.position = leftNode.position;
-        reset = false;
         bubbles.SetActive(false);
     }
 }
