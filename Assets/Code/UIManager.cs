@@ -37,7 +37,7 @@ namespace Gameplay
             float remainder = Mathf.Round((time % 1) * 100);
             Timer.text = seconds + ":" + remainder.ToString("00");
 
-            Month.text = "Month: " + month.ToString();
+            Month.text = "Month " + month.ToString();
             Money.text = "$" + cash.ToString();
             Rent.text = "$" + rent.ToString();
         }
