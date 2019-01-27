@@ -4,11 +4,9 @@ namespace Gameplay {
     [System.Serializable]
     public class Trait {
         public TraitData data;
-        public bool like;
 
-        public Trait(TraitData data, bool like) {
+        public Trait(TraitData data) {
             this.data = data;
-            this.like = like;
         }
     }
 
