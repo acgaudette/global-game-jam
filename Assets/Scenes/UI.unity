@@ -520,6 +520,60 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 377604659}
   m_CullTransparentMesh: 0
+--- !u!1 &417822580
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 417822582}
+  - component: {fileID: 417822581}
+  m_Layer: 0
+  m_Name: UIManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &417822581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417822580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8277fee37537efe4b98bfc72fd23231e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Money: {fileID: 1755047933}
+  Rent: {fileID: 1157727741}
+  Timer: {fileID: 435611450}
+  Month: {fileID: 377604661}
+  AcceptButton: {fileID: 763361134}
+  RejectButton: {fileID: 763361134}
+  Portrait: {fileID: 1369853523}
+  PortraitName: {fileID: 1551844478}
+  PortraitIcon: {fileID: 0}
+  HateIcon: {fileID: 0}
+  Value: {fileID: 985544667}
+--- !u!4 &417822582
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417822580}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.9278914, y: 0.37213546, z: -0.0625}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &435611448
 GameObject:
   m_ObjectHideFlags: 0
@@ -1548,8 +1602,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1369853522}
   - component: {fileID: 1369853525}
-  - component: {fileID: 1369853524}
   - component: {fileID: 1369853523}
+  - component: {fileID: 1369853524}
   m_Layer: 5
   m_Name: ICON
   m_TagString: Untagged
@@ -1606,7 +1660,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1369853521}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -1617,15 +1671,13 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 960c81577fbfd453d8ea22cbe080604d, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
+  m_Texture: {fileID: 2800000, guid: 960c81577fbfd453d8ea22cbe080604d, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!222 &1369853525
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1901,7 +1953,7 @@ GameObject:
   - component: {fileID: 1551844479}
   - component: {fileID: 1551844478}
   m_Layer: 5
-  m_Name: Timer (1)
+  m_Name: PortraitName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1923,9 +1975,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -323, y: 10}
+  m_AnchoredPosition: {x: -322.99945, y: 17.965254}
   m_SizeDelta: {x: 220.87, y: 98.4}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0.63121754}
 --- !u!114 &1551844478
 MonoBehaviour:
   m_ObjectHideFlags: 0
