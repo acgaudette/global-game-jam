@@ -3078,6 +3078,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1559828648843975731, guid: 201dd8c8a1937f9f7b044cf4a4766e0d,
+        type: 3}
+      propertyPath: orthographic size
+      value: 4.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2196495449495568738, guid: 201dd8c8a1937f9f7b044cf4a4766e0d,
         type: 3}
       propertyPath: game
@@ -3086,17 +3091,17 @@ PrefabInstance:
     - target: {fileID: 2196495449495568738, guid: 201dd8c8a1937f9f7b044cf4a4766e0d,
         type: 3}
       propertyPath: minX
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2196495449495568738, guid: 201dd8c8a1937f9f7b044cf4a4766e0d,
         type: 3}
       propertyPath: maxX
-      value: 0
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 2196495449495568738, guid: 201dd8c8a1937f9f7b044cf4a4766e0d,
         type: 3}
       propertyPath: minY
-      value: 0
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 2196495449495568738, guid: 201dd8c8a1937f9f7b044cf4a4766e0d,
         type: 3}
@@ -3106,7 +3111,7 @@ PrefabInstance:
     - target: {fileID: 2196495449495568738, guid: 201dd8c8a1937f9f7b044cf4a4766e0d,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 201dd8c8a1937f9f7b044cf4a4766e0d, type: 3}
