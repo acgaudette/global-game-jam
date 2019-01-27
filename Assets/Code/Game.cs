@@ -106,7 +106,7 @@ namespace Gameplay {
 
                 ++month;
                 // Update resources at the end of the month
-                //rent = startingRent * (rentIncreaseFactor * month);
+                rent = startingRent * (rentIncreaseFactor * month);
                 //cash = startingCash * Mathf.Pow(cashDecreaseFactor, month);
                 cash = Mathf.Max(0, cash - rent);
 
