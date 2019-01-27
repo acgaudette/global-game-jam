@@ -2,10 +2,48 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20231edf-547f-404e-bfd3-e65eb50c1443" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX wavs/__MACOSX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Tenant.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Tenant.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Home 1.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Home 1.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/New Material 6.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/New Material 6.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Plate.mtl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Plate.mtl.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Plate.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Plate.obj.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/SNES.mtl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/SNES.mtl.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/SNES.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/SNES.obj.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/SNESController.mtl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/SNESController.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/SNESController.obj.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/TV.mtl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/TV.mtl.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/TV.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/TV.obj.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Props.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Props.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/brick_wall_texture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/brick_wall_texture.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GGJ_2019/.idea/contentModel.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GGJ_2019/.idea/indexLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GGJ_2019/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GGJ_2019/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GGJ_2019/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GGJ_2019/riderModule.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/New Material 3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/New Material 3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/HomeAppleWallpaper_Floor.mtl" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/HomeAppleWallpaper_Floor.mtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/HomeAppleWallpaper_Floor.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/HomeAppleWallpaper_Floor.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/SNESController.mtl.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/SNESController.mtl.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/DebugTenant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/DebugTenant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SpriteTenant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SpriteTenant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/UI.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/UI.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/.mayaSwatches/bigger_apple_wallpaper.png_hcm.swatch" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/.mayaSwatches/bigger_apple_wallpaper.png_hcm.swatch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/HomeDiffuse.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/HomeDiffuse.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/big_apple_wallpaper_texture.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/big_apple_wallpaper_texture.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/bigger_apple_wallpaper.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/bigger_apple_wallpaper.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,37 +53,77 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Code/Tenant.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-272">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="110">
+              <caret line="160" column="50" selection-start-line="160" selection-start-column="50" selection-end-line="160" selection-end-column="50" />
               <folding>
-                <marker date="1548614219442" expanded="false" signature="6:78" ph="..." />
-                <marker date="1548614219442" expanded="true" signature="97:4964" ph="{...}" />
-                <marker date="1548614219442" expanded="true" signature="191:4723" ph="{...}" />
-                <marker date="1548614219442" expanded="true" signature="817:1005" ph="{...}" />
-                <marker date="1548614219442" expanded="true" signature="1027:1349" ph="{...}" />
-                <marker date="1548614219442" expanded="true" signature="1212:1326" ph="{...}" />
-                <marker date="1548614219442" expanded="true" signature="1379:1445" ph="{...}" />
-                <marker date="1548614219442" expanded="true" signature="1517:1695" ph="{...}" />
-                <marker date="1548614219442" expanded="true" signature="1724:1831" ph="{...}" />
-                <marker date="1548614219442" expanded="true" signature="1869:2646" ph="{...}" />
-                <marker date="1548614219442" expanded="true" signature="1909:2636" ph="{...}" />
-                <marker date="1548614219442" expanded="true" signature="2403:2502" ph="{...}" />
-                <marker date="1548614219442" expanded="true" signature="2668:4717" ph="{...}" />
-                <marker date="1548614219442" expanded="true" signature="2719:3675" ph="{...}" />
-                <marker date="1548614219442" expanded="true" signature="3057:3123" ph="{...}" />
-                <marker date="1548614219442" expanded="true" signature="3150:3661" ph="{...}" />
-                <marker date="1548614219442" expanded="true" signature="3241:3320" ph="{...}" />
-                <marker date="1548614219442" expanded="true" signature="3345:3428" ph="{...}" />
-                <marker date="1548614219442" expanded="true" signature="3692:3829" ph="{...}" />
-                <marker date="1548614219442" expanded="true" signature="3738:3815" ph="{...}" />
-                <marker date="1548614219442" expanded="true" signature="4315:4707" ph="{...}" />
-                <marker date="1548614219442" expanded="true" signature="4346:4515" ph="/* transform.Find(&quot;tenantSource(Clone)&quot;).GetComponent&lt;AudioSource&gt;().volume -= .055f; ... */" />
-                <marker date="1548614219442" expanded="true" signature="4561:4692" ph="{...}" />
-                <marker date="1548614219442" expanded="true" signature="4778:4962" ph="{...}" />
-                <marker date="1548614219442" expanded="true" signature="4887:4956" ph="{...}" />
+                <marker date="1548614387095" expanded="false" signature="6:78" ph="..." />
+                <marker date="1548614387095" expanded="true" signature="97:4964" ph="{...}" />
+                <marker date="1548614387095" expanded="true" signature="191:4723" ph="{...}" />
+                <marker date="1548614387095" expanded="true" signature="817:1005" ph="{...}" />
+                <marker date="1548614387095" expanded="true" signature="1027:1349" ph="{...}" />
+                <marker date="1548614387095" expanded="true" signature="1212:1326" ph="{...}" />
+                <marker date="1548614387095" expanded="true" signature="1379:1445" ph="{...}" />
+                <marker date="1548614387095" expanded="true" signature="1517:1695" ph="{...}" />
+                <marker date="1548614387095" expanded="true" signature="1724:1831" ph="{...}" />
+                <marker date="1548614387095" expanded="true" signature="1869:2646" ph="{...}" />
+                <marker date="1548614387095" expanded="true" signature="1909:2636" ph="{...}" />
+                <marker date="1548614387095" expanded="true" signature="2403:2502" ph="{...}" />
+                <marker date="1548614387095" expanded="true" signature="2668:4717" ph="{...}" />
+                <marker date="1548614387095" expanded="true" signature="2719:3675" ph="{...}" />
+                <marker date="1548614387095" expanded="true" signature="3057:3123" ph="{...}" />
+                <marker date="1548614387095" expanded="true" signature="3150:3661" ph="{...}" />
+                <marker date="1548614387095" expanded="true" signature="3241:3320" ph="{...}" />
+                <marker date="1548614387095" expanded="true" signature="3345:3428" ph="{...}" />
+                <marker date="1548614387095" expanded="true" signature="3692:3829" ph="{...}" />
+                <marker date="1548614387095" expanded="true" signature="3738:3815" ph="{...}" />
+                <marker date="1548614387095" expanded="true" signature="4315:4707" ph="{...}" />
+                <marker date="1548614387095" expanded="true" signature="4346:4515" ph="/* transform.Find(&quot;tenantSource(Clone)&quot;).GetComponent&lt;AudioSource&gt;().volume -= .055f; ... */" />
+                <marker date="1548614387095" expanded="true" signature="4561:4692" ph="{...}" />
+                <marker date="1548614387095" expanded="true" signature="4778:4962" ph="{...}" />
+                <marker date="1548614387095" expanded="true" signature="4887:4956" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Audio/playSynced.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="426">
+              <caret line="52" column="27" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
+              <folding>
+                <marker date="1548614331659" expanded="false" signature="6:78" ph="..." />
+                <marker date="1548614331659" expanded="true" signature="119:1443" ph="{...}" />
+                <marker date="1548614331659" expanded="true" signature="374:893" ph="{...}" />
+                <marker date="1548614331659" expanded="true" signature="590:719" ph="{...}" />
+                <marker date="1548614331659" expanded="true" signature="732:862" ph="{...}" />
+                <marker date="1548614331659" expanded="true" signature="951:1441" ph="{...}" />
+                <marker date="1548614331659" expanded="true" signature="998:1067" ph="{...}" />
+                <marker date="1548614331659" expanded="true" signature="1101:1149" ph="{...}" />
+                <marker date="1548614331659" expanded="true" signature="1191:1399" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/endingAudio.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="53" column="9" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
+              <folding>
+                <marker date="1548616863336" expanded="false" signature="6:94" ph="..." />
+                <marker date="1548616863336" expanded="true" signature="136:1284" ph="{...}" />
+                <marker date="1548616863336" expanded="true" signature="339:360" ph="{...}" />
+                <marker date="1548616863336" expanded="true" signature="418:1282" ph="{...}" />
+                <marker date="1548616863336" expanded="true" signature="443:513" ph="{...}" />
+                <marker date="1548616863336" expanded="true" signature="548:1148" ph="{...}" />
+                <marker date="1548616863336" expanded="true" signature="811:1125" ph="{...}" />
+                <marker date="1548616863336" expanded="true" signature="998:1111" ph="{...}" />
+                <marker date="1548616863336" expanded="true" signature="1161:1267" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -58,11 +136,14 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Code/Tenant.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/endingAudio.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Audio/playSynced.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Code/Tenant.cs" />
+        <option value="$PROJECT_DIR$/Assets/endingAudio.cs" />
       </list>
     </option>
   </component>
@@ -140,7 +221,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1553000" />
+    <option name="totallyTimeSpent" value="2312000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -205,34 +286,34 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Assets/Code/Tenant.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-272">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="110">
+          <caret line="160" column="50" selection-start-line="160" selection-start-column="50" selection-end-line="160" selection-end-column="50" />
           <folding>
-            <marker date="1548614219442" expanded="false" signature="6:78" ph="..." />
-            <marker date="1548614219442" expanded="true" signature="97:4964" ph="{...}" />
-            <marker date="1548614219442" expanded="true" signature="191:4723" ph="{...}" />
-            <marker date="1548614219442" expanded="true" signature="817:1005" ph="{...}" />
-            <marker date="1548614219442" expanded="true" signature="1027:1349" ph="{...}" />
-            <marker date="1548614219442" expanded="true" signature="1212:1326" ph="{...}" />
-            <marker date="1548614219442" expanded="true" signature="1379:1445" ph="{...}" />
-            <marker date="1548614219442" expanded="true" signature="1517:1695" ph="{...}" />
-            <marker date="1548614219442" expanded="true" signature="1724:1831" ph="{...}" />
-            <marker date="1548614219442" expanded="true" signature="1869:2646" ph="{...}" />
-            <marker date="1548614219442" expanded="true" signature="1909:2636" ph="{...}" />
-            <marker date="1548614219442" expanded="true" signature="2403:2502" ph="{...}" />
-            <marker date="1548614219442" expanded="true" signature="2668:4717" ph="{...}" />
-            <marker date="1548614219442" expanded="true" signature="2719:3675" ph="{...}" />
-            <marker date="1548614219442" expanded="true" signature="3057:3123" ph="{...}" />
-            <marker date="1548614219442" expanded="true" signature="3150:3661" ph="{...}" />
-            <marker date="1548614219442" expanded="true" signature="3241:3320" ph="{...}" />
-            <marker date="1548614219442" expanded="true" signature="3345:3428" ph="{...}" />
-            <marker date="1548614219442" expanded="true" signature="3692:3829" ph="{...}" />
-            <marker date="1548614219442" expanded="true" signature="3738:3815" ph="{...}" />
-            <marker date="1548614219442" expanded="true" signature="4315:4707" ph="{...}" />
-            <marker date="1548614219442" expanded="true" signature="4346:4515" ph="/* transform.Find(&quot;tenantSource(Clone)&quot;).GetComponent&lt;AudioSource&gt;().volume -= .055f; ... */" />
-            <marker date="1548614219442" expanded="true" signature="4561:4692" ph="{...}" />
-            <marker date="1548614219442" expanded="true" signature="4778:4962" ph="{...}" />
-            <marker date="1548614219442" expanded="true" signature="4887:4956" ph="{...}" />
+            <marker date="1548614387095" expanded="false" signature="6:78" ph="..." />
+            <marker date="1548614387095" expanded="true" signature="97:4964" ph="{...}" />
+            <marker date="1548614387095" expanded="true" signature="191:4723" ph="{...}" />
+            <marker date="1548614387095" expanded="true" signature="817:1005" ph="{...}" />
+            <marker date="1548614387095" expanded="true" signature="1027:1349" ph="{...}" />
+            <marker date="1548614387095" expanded="true" signature="1212:1326" ph="{...}" />
+            <marker date="1548614387095" expanded="true" signature="1379:1445" ph="{...}" />
+            <marker date="1548614387095" expanded="true" signature="1517:1695" ph="{...}" />
+            <marker date="1548614387095" expanded="true" signature="1724:1831" ph="{...}" />
+            <marker date="1548614387095" expanded="true" signature="1869:2646" ph="{...}" />
+            <marker date="1548614387095" expanded="true" signature="1909:2636" ph="{...}" />
+            <marker date="1548614387095" expanded="true" signature="2403:2502" ph="{...}" />
+            <marker date="1548614387095" expanded="true" signature="2668:4717" ph="{...}" />
+            <marker date="1548614387095" expanded="true" signature="2719:3675" ph="{...}" />
+            <marker date="1548614387095" expanded="true" signature="3057:3123" ph="{...}" />
+            <marker date="1548614387095" expanded="true" signature="3150:3661" ph="{...}" />
+            <marker date="1548614387095" expanded="true" signature="3241:3320" ph="{...}" />
+            <marker date="1548614387095" expanded="true" signature="3345:3428" ph="{...}" />
+            <marker date="1548614387095" expanded="true" signature="3692:3829" ph="{...}" />
+            <marker date="1548614387095" expanded="true" signature="3738:3815" ph="{...}" />
+            <marker date="1548614387095" expanded="true" signature="4315:4707" ph="{...}" />
+            <marker date="1548614387095" expanded="true" signature="4346:4515" ph="/* transform.Find(&quot;tenantSource(Clone)&quot;).GetComponent&lt;AudioSource&gt;().volume -= .055f; ... */" />
+            <marker date="1548614387095" expanded="true" signature="4561:4692" ph="{...}" />
+            <marker date="1548614387095" expanded="true" signature="4778:4962" ph="{...}" />
+            <marker date="1548614387095" expanded="true" signature="4887:4956" ph="{...}" />
           </folding>
         </state>
       </provider>

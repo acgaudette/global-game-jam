@@ -19,6 +19,7 @@
           <e p="Trait.cs" t="Include" />
           <e p="UIManager.cs" t="Include" />
         </e>
+        <e p="endingAudio.cs" t="Include" />
         <e p="Shaders" t="Include">
           <e p="NewSurfaceShader.shader" t="Include" />
         </e>

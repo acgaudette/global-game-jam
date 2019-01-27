@@ -58,7 +58,7 @@ MonoBehaviour:
   minX: -7
   maxX: 11.4
   minY: -6
-  maxY: -1
+  maxY: 1
   minZ: -8
   maxZ: -7
 --- !u!212 &2399925898005599489
