@@ -10,8 +10,9 @@ public class CameraControl: MonoBehaviour {
     public float minY;
     public float maxY;
 
-    public Vector2 shakeAmount;
+    public Vector3 shakeAmount;
     public float shakeTime;
+    public float offsetFactor;
 
     [Header("Read-only")]
 
@@ -20,7 +21,7 @@ public class CameraControl: MonoBehaviour {
     public float shakeTimer;
     public Vector3 lastShake;
     public Vector3 lastPosition;
-    public Vector2 actualAmount;
+    public Vector3 actualAmount;
 
     void LateUpdate() {
         Vector3 com = Vector3.zero;
@@ -38,19 +39,40 @@ public class CameraControl: MonoBehaviour {
         com.x = Mathf.Clamp(com.x, minX, maxX);
         com.y = Mathf.Clamp(com.y, minY, maxY);
 
+        // For inverse orbit
+        //com = -com;
+
+        com.z = -10;
+
         transform.position = Vector3.Lerp(
             lastPosition,
             com,
             Time.deltaTime * damping
         ) + shake;
 
+        var tmpLast = lastPosition;
         lastPosition = transform.position - shake;
 
+        // Reset z
         transform.position = new Vector3(
             transform.position.x,
             transform.position.y,
             -10
         );
+
+        /*
+        var targetPosition = Vector3.Lerp(
+            tmpLast,
+            -com,
+            Time.deltaTime * damping
+        );
+        */
+
+        //var offset = targetPosition * offsetFactor;
+        var offset = transform.position * offsetFactor;
+        offset.z = 0;
+
+        transform.LookAt(offset);
 
         if (game.kicked) {
             shaking = true;
