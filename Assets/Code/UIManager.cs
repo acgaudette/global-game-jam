@@ -25,7 +25,7 @@ namespace Gameplay
 
         void Start() {
             timerPosition = Timer.transform.position;
-            valuePosition = Value.transform.position;
+            //valuePosition = Value.transform.position;
         }
 
         public void UpdateProposalUI(TenantData proposal)
@@ -48,10 +48,12 @@ namespace Gameplay
             if (lastProposal > 0) {
                 float factor = lastProposal / 100;
                 Vector2 shake = Random.insideUnitCircle * 9 * factor;
+                /*
                 Value.transform.position = valuePosition
                     + new Vector3(shake.x, shake.y, 0);
+                */
             } else {
-                Value.transform.position = valuePosition;
+                //Value.transform.position = valuePosition;
             }
 
             int seconds = Mathf.FloorToInt(time);
