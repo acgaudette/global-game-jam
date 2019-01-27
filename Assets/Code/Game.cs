@@ -29,6 +29,9 @@ namespace Gameplay {
         public float cash;
         public bool kicked = false;
 
+        public float pitchRamp;
+        public float volume;
+
         [Header("Assets")]
 
         public Tenant tenantPrefab;
@@ -40,10 +43,14 @@ namespace Gameplay {
 
         public createTenantAudio audioM;
 
+        AudioSource audSrc;
+
         void Awake() {
             timer = timeLimit;
             rent = startingRent;
             cash = startingCash;
+
+            audSrc = GetComponent<AudioSource>();
         }
 
         void Update() {
@@ -80,6 +87,10 @@ namespace Gameplay {
 
             if (timer < 0.0) {
                 if (cash >= rent) {
+
+                    audSrc.PlayOneShot(GetComponent < SoundEffects > ().newMonth);
+
+
                     Debug.Log("Rent paid");
 
                     ++month;
@@ -95,12 +106,16 @@ namespace Gameplay {
                 else {
                     Debug.Log("Game over");
                     gameOver = true;
+                    audSrc.PlayOneShot(GetComponent < SoundEffects > ().fail);
+
                 }
             }
 
             if (deciding) {
                 // Decision: YES trigger
                 if (Input.GetKeyDown(KeyCode.RightArrow)) {
+
+                    audSrc.PlayOneShot(GetComponent<SoundEffects>().tenantYes);
                     // Create new tenant
                     var tenant = GameObject.Instantiate(
                         tenantPrefab,
@@ -143,7 +158,10 @@ namespace Gameplay {
                     if (kickList.Count > 0) {
                         Debug.Log(
                             "Conflict with " + kickList.Count + " residents!"
+
+
                         );
+                        audSrc.PlayOneShot(GetComponent< SoundEffects > ().cash);
 
                         // Kick conflicts
                         foreach (var kick in kickList) {
@@ -163,6 +181,9 @@ namespace Gameplay {
 
                 // Decision: NO trigger
                 if (Input.GetKeyDown(KeyCode.LeftArrow)) {
+
+                    audSrc.PlayOneShot(GetComponent<SoundEffects>().tenantNo);
+
                     ui.Reject();
                     deciding = false;
                     Debug.Log("Rejected tenant");
@@ -189,6 +210,14 @@ namespace Gameplay {
 
         // Procedurally-generate new tenant proposal
         TenantData GenerateProposal() {
+
+
+            //audSrc.pitch = Random.Range(.9f, 1.1f);
+            audSrc.PlayOneShot(GetComponent<SoundEffects>().doorBell, volume);
+
+            audSrc.pitch = 1f + pitchRamp * tenants.Count;
+
+
             int limit = Mathf.Min(traitPool.Count, (int)(startingCap * month));
             int randomIndex = Random.Range(0, limit);
             Trait data = traitPool[randomIndex];
