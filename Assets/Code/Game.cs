@@ -43,6 +43,8 @@ namespace Gameplay {
         public Text decisionText;
         public Text extraText;
 
+        public createTenantAudio audioM;
+
         void Awake() {
             timer = timeLimit;
             rent = startingRent;
@@ -114,6 +116,22 @@ namespace Gameplay {
                         spawnPoint.position,
                         Quaternion.identity,
                         this.transform
+                    );
+
+                    // Audio
+                    int index = 0;
+
+                    for (int i = 0; i < traitPool.Count; ++i) {
+                        if (traitPool[i] == proposal.trait) {
+                            index = i;
+                            break;
+                        }
+                    }
+
+                    audioM.makeSource(
+                        //proposal.trait... // TODO
+                        index,
+                        tenant.transform
                     );
 
                     tenant.data = proposal;
