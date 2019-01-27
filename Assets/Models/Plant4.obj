@@ -1,0 +1,20 @@
+# This file uses centimeters as units for non-parametric coordinates.
+
+mtllib Plant4.mtl
+g default
+v -0.068922 -0.453959 -6.456840
+v 0.537780 -0.453959 -6.456840
+v -0.068922 0.793011 -6.191789
+v 0.537780 0.793011 -6.191789
+vt 0.000969 0.001992
+vt 0.485572 0.001992
+vt 0.485572 0.998008
+vt 0.000969 0.998008
+vn 0.000000 -0.207911 0.978148
+vn 0.000000 -0.207911 0.978148
+vn 0.000000 -0.207911 0.978148
+vn 0.000000 -0.207911 0.978148
+s off
+g polySurface12 polySurface9 polySurface4 pCube54
+usemtl lambert9SG
+f 1/1/1 2/2/2 4/3/3 3/4/4
