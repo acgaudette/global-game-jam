@@ -111,6 +111,8 @@ namespace Gameplay
         }
     }
 
+    [System.Serializable]
+    
     public class TenantData
     {
         public float worth;
