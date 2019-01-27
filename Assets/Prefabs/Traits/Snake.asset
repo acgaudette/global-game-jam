@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Snake
   m_EditorClassIdentifier: 
   TraitName: Snake
-  TraitID: 0
+  TraitID: 7
   Sprites: {fileID: 0}
   Icon: {fileID: 2800000, guid: 209faca289e9f4fe09ad2485b7dea916, type: 3}
   Description: Loves snek
-  Hate: {fileID: 0}
+  Hate: {fileID: 11400000, guid: e82d578db80974d8b9ee21ccb502b037, type: 2}
   HateSpeech: 
-  TraitColor: {r: 0.034131378, g: 0.5566038, b: 0.10992973, a: 0}
+  TraitColor: {r: 0.8301887, g: 0.68005025, b: 0.093983606, a: 1}

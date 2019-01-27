@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Teeth
   m_EditorClassIdentifier: 
   TraitName: Teeth
-  TraitID: 0
+  TraitID: 10
   Sprites: {fileID: 0}
   Icon: {fileID: 2800000, guid: e1881a5cf953e4feeb2b12e960e77049, type: 3}
   Description: 
-  Hate: {fileID: 0}
+  Hate: {fileID: 11400000, guid: b8af273b1627a469099b5cbf234e8a14, type: 2}
   HateSpeech: 
   TraitColor: {r: 0.9176471, g: 0.37254903, b: 0.7019608, a: 1}

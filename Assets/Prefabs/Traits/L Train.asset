@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: L Train
   m_EditorClassIdentifier: 
   TraitName: L Train
-  TraitID: 0
+  TraitID: 5
   Sprites: {fileID: 0}
   Icon: {fileID: 2800000, guid: fe60651b17a2f40afb4ab56dba0361b2, type: 3}
   Description: 
-  Hate: {fileID: 0}
+  Hate: {fileID: 11400000, guid: 8cc09158c405f4ddbb00f17b8d917799, type: 2}
   HateSpeech: 
-  TraitColor: {r: 0.6886792, g: 0.6886792, b: 0.6886792, a: 0}
+  TraitColor: {r: 0.6886792, g: 0.6886792, b: 0.6886792, a: 1}
