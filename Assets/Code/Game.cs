@@ -116,8 +116,8 @@ namespace Gameplay {
                     );
 
                     tenant.data = proposal;
-                    tenant.GetComponent<SpriteRenderer>().color
-                        = proposal.trait.TraitColor;
+                    //tenant.GetComponent<SpriteRenderer>().color
+                        //= proposal.trait.TraitColor;
                     tenants.Add(tenant);
                     tenant.Enter();
                     tenant.Wander();
