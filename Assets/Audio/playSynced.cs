@@ -45,7 +45,6 @@ public class playSynced : MonoBehaviour
         if(audSrc.volume <1 && !fadedIn)
         {
             audSrc.volume += .055f;
-            
         }
 
         if (audSrc.volume >.99f)
