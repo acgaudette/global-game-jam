@@ -70,7 +70,7 @@ namespace Gameplay
                 Timer.fontSize = 90;
 
                 // Shake
-                Vector2 shake = Random.insideUnitCircle * 6;
+                Vector2 shake = Random.insideUnitCircle * 8;
                 Timer.transform.position = timerPosition
                     + new Vector3(shake.x, shake.y, 0);
             } else {
