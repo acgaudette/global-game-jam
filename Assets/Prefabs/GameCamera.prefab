@@ -96,16 +96,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   game: {fileID: 0}
-  damping: 1
+  damping: 0.8
   minX: -3.5
   maxX: 3.5
   minY: -0.5
   maxY: 0.5
-  shakeAmount: {x: 0.4, y: 0.2}
+  shakeAmount: {x: 0.4, y: 0.4, z: 4}
   shakeTime: 1
+  offsetFactor: 0.75
   shaking: 0
   shake: {x: 0, y: 0, z: 0}
   shakeTimer: 0
   lastShake: {x: 0, y: 0, z: 0}
   lastPosition: {x: 0, y: 0, z: 0}
-  actualAmount: {x: 0, y: 0}
+  actualAmount: {x: 0, y: 0, z: 0}
