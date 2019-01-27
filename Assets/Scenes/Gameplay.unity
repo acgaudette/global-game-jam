@@ -1089,6 +1089,80 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2112156141}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1555353180381621159
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3684655314811901941, guid: 7e42ec6284f50acee81de79b3c895a19,
+        type: 3}
+      propertyPath: m_Name
+      value: audioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 1566615458682106134, guid: 7e42ec6284f50acee81de79b3c895a19,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.87063974
+      objectReference: {fileID: 0}
+    - target: {fileID: 1566615458682106134, guid: 7e42ec6284f50acee81de79b3c895a19,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1566615458682106134, guid: 7e42ec6284f50acee81de79b3c895a19,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1566615458682106134, guid: 7e42ec6284f50acee81de79b3c895a19,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1566615458682106134, guid: 7e42ec6284f50acee81de79b3c895a19,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1566615458682106134, guid: 7e42ec6284f50acee81de79b3c895a19,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1566615458682106134, guid: 7e42ec6284f50acee81de79b3c895a19,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1566615458682106134, guid: 7e42ec6284f50acee81de79b3c895a19,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1566615458682106134, guid: 7e42ec6284f50acee81de79b3c895a19,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1566615458682106134, guid: 7e42ec6284f50acee81de79b3c895a19,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1566615458682106134, guid: 7e42ec6284f50acee81de79b3c895a19,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 312638011673532708, guid: 7e42ec6284f50acee81de79b3c895a19,
+        type: 3}
+      propertyPath: debug
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7e42ec6284f50acee81de79b3c895a19, type: 3}
 --- !u!1001 &3630413604593760578
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1101,6 +1175,58 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game
       objectReference: {fileID: 0}
+    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
+        type: 3}
+      propertyPath: traitPool.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
+        type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 1692152781}
+    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
+        type: 3}
+      propertyPath: scoreText
+      value: 
+      objectReference: {fileID: 1354716756}
+    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
+        type: 3}
+      propertyPath: timerText
+      value: 
+      objectReference: {fileID: 163273976}
+    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
+        type: 3}
+      propertyPath: proposalText
+      value: 
+      objectReference: {fileID: 1607335145}
+    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
+        type: 3}
+      propertyPath: decisionText
+      value: 
+      objectReference: {fileID: 1700702972}
+    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
+        type: 3}
+      propertyPath: extraText
+      value: 
+      objectReference: {fileID: 809577363}
+    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
+        type: 3}
+      propertyPath: traitPool.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7015d0a492abd7f4c8a0614f6f8972d2,
+        type: 2}
+    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
+        type: 3}
+      propertyPath: traitPool.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 088203994735bf048b694f62e66f1b5e,
+        type: 2}
+    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
+        type: 3}
+      propertyPath: audioM
+      value: 
+      objectReference: {fileID: 3684655314811901943}
     - target: {fileID: 3630413605010961370, guid: d97870e1f2bacaef0a02add1616e17a1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1156,55 +1282,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
-        type: 3}
-      propertyPath: traitPool.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
-        type: 3}
-      propertyPath: spawnPoint
-      value: 
-      objectReference: {fileID: 1692152781}
-    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
-        type: 3}
-      propertyPath: scoreText
-      value: 
-      objectReference: {fileID: 1354716756}
-    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
-        type: 3}
-      propertyPath: timerText
-      value: 
-      objectReference: {fileID: 163273976}
-    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
-        type: 3}
-      propertyPath: proposalText
-      value: 
-      objectReference: {fileID: 1607335145}
-    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
-        type: 3}
-      propertyPath: decisionText
-      value: 
-      objectReference: {fileID: 1700702972}
-    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
-        type: 3}
-      propertyPath: extraText
-      value: 
-      objectReference: {fileID: 809577363}
-    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
-        type: 3}
-      propertyPath: traitPool.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 7015d0a492abd7f4c8a0614f6f8972d2,
-        type: 2}
-    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
-        type: 3}
-      propertyPath: traitPool.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: 088203994735bf048b694f62e66f1b5e,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d97870e1f2bacaef0a02add1616e17a1, type: 3}
+--- !u!114 &3684655314811901943 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 312638011673532708, guid: 7e42ec6284f50acee81de79b3c895a19,
+    type: 3}
+  m_PrefabInstance: {fileID: 1555353180381621159}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0f7b16c8922fa822a2741763cd9acad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3750333165648132868
 PrefabInstance:
   m_ObjectHideFlags: 0
