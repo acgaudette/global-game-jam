@@ -5,21 +5,15 @@ using System.Collections.Generic;
 namespace Gameplay {
     public class Game: MonoBehaviour {
         public List<TraitData> traitPool;
-
-        public float timeLimit = 60;
-
-        public float decidePause = 0.25f;
-        public float decidePunishPause = 1;
-
-        public uint startingRent = 10000;
-        public uint startingCash = 10000;
-        public float rentIncreaseFactor = 1.5f;
-        public float cashDecreaseFactor = 0.8f;
+        public float timeLimit = 25;
+        public float decidePause = .25f;
+        public float decidePunishPause = .75f;
+        public uint startingRent = 200;
+        public float rentIncreaseFactor = .8f;
+        public uint startingCash = 0;
 
         // Random generation
         public uint startingCap = 2;
-        public uint maxFactor = 8;
-        public AnimationCurve factorCurve;
         public uint[] worths;
 
         [Header("Read-only")]
@@ -88,29 +82,14 @@ namespace Gameplay {
 
             timer -= Time.deltaTime;
 
-            /*
-            // Compute rent by number of tenants
-            if (tenants.Count > 0) {
-                var sum = 0f;
-
-                foreach (var tenant in tenants) {
-                    sum += tenant.data.valueFactor;
-                }
-
-                rent = startingRent / sum;
-            } else {
-                rent = startingRent;
-            }
-            */
-
             if (timer < 0.0) {
                 if (cash >= rent) {
                     Debug.Log("Rent paid");
 
                     ++month;
+
                     // Update resources at the end of the month
                     rent = startingRent * (rentIncreaseFactor * month);
-                    //cash = startingCash * Mathf.Pow(cashDecreaseFactor, month);
                     cash = Mathf.Max(0, cash - rent);
 
                     timer = timeLimit;
@@ -136,7 +115,7 @@ namespace Gameplay {
 
                     tenant.data = proposal;
                     tenant.GetComponent<SpriteRenderer>().color
-                        = tenant.data.traits[0].data.debugColor;
+                        = tenant.data.trait.data.debugColor;
                     tenants.Add(tenant);
                     tenant.Enter();
                     tenant.Wander();
@@ -160,11 +139,9 @@ namespace Gameplay {
                         }
                     }
 
-                    // There was a conflict
+                    // There was a conflict;
+                    // keep the new tenant but kick the rest
                     if (kickList.Count > 0) {
-                        // Don't kick new tenant; keep them
-                        //kickList.Add(tenant);
-
                         Debug.Log(
                             "Conflict with " + kickList.Count + " residents!"
                         );
@@ -228,29 +205,15 @@ namespace Gameplay {
             int limit = Mathf.Min(traitPool.Count, (int)(startingCap * month));
             int randomIndex = Random.Range(0, limit);
             TraitData data = traitPool[randomIndex];
-            bool like = Random.value > 0.5;
-            Trait randomTrait = new Trait(data, like);
-
-            /*
-            //float factor = Random.Range(1, maxFactor + 1);
-            float factor = (maxFactor) * factorCurve.Evaluate(Random.value) + 1;
-            factor = Mathf.Floor(factor);
-            if (factor % 2 == 0) {
-                factor--;
-            }
-
-            factor *= 100; // $
-            */
+            Trait randomTrait = new Trait(data);
 
             uint count = 0;
             foreach (var tenant in tenants) {
-                if (tenant.data.traits[0].data.title == data.title) {
+                if (tenant.data.trait.data.title == data.title) {
                     ++count;
                 }
             }
             int index = Mathf.Min((int)count, worths.Length - 1);
-
-            //int factor = Mathf.Min((int)count * 10, 100);
             uint worth = worths[index];
 
             TenantData proposal = new TenantData(randomTrait, worth);
@@ -260,11 +223,11 @@ namespace Gameplay {
         void UpdateProposalUI(TenantData proposal) {
             proposalText.text = "Proposal:";
             decisionText.text = proposal.ToString();
-            decisionText.color = proposal.traits[0].data.debugColor;
+            decisionText.color = proposal.trait.data.debugColor;
             extraText.text = "(Hates "
-                + proposal.traits[0].data.hates + ")";
+                + proposal.trait.data.hates + ")";
             extraText.color = traitPool.Find(
-                x => x.title == proposal.traits[0].data.hates
+                x => x.title == proposal.trait.data.hates
             ).debugColor;
         }
     }
