@@ -89,7 +89,7 @@ public class CameraControl: MonoBehaviour {
                 Vector3 target = new Vector3(
                     Random.Range(-actualAmount.x, actualAmount.x),
                     Random.Range(-actualAmount.y, actualAmount.y),
-                    0
+                    Random.Range(-actualAmount.z, actualAmount.z)
                 );
 
                 float compare = Vector3.Distance(target, lastShake);
