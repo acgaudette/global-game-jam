@@ -31,6 +31,7 @@ namespace Gameplay {
         public uint startingCap = 2;
         public uint maxFactor = 8;
         public AnimationCurve factorCurve;
+        public uint[] worths;
 
         public Text scoreText;
         public Text timerText;
@@ -96,6 +97,14 @@ namespace Gameplay {
             if (timer < 0.0) {
                 if (cash >= rent) {
                     Debug.Log("Rent paid");
+
+                    ++month;
+                    // Update resources at the end of the month
+                    rent = startingRent * (rentIncreaseFactor * month);
+                    //cash = startingCash * Mathf.Pow(cashDecreaseFactor, month);
+                    cash = Mathf.Max(0, cash - rent);
+
+                    timer = timeLimit;
                 }
 
                 // Game over
@@ -103,14 +112,6 @@ namespace Gameplay {
                     Debug.Log("Game over");
                     gameOver = true;
                 }
-
-                ++month;
-                // Update resources at the end of the month
-                rent = startingRent * (rentIncreaseFactor * month);
-                //cash = startingCash * Mathf.Pow(cashDecreaseFactor, month);
-                cash = Mathf.Max(0, cash - rent);
-
-                timer = timeLimit;
             }
 
             if (deciding) {
@@ -238,10 +239,12 @@ namespace Gameplay {
                     ++count;
                 }
             }
+            int index = Mathf.Min((int)count, worths.Length - 1);
 
-            int factor = Mathf.Min((int)count * 10, 100);
+            //int factor = Mathf.Min((int)count * 10, 100);
+            uint worth = worths[index];
 
-            TenantData proposal = new TenantData(randomTrait, (uint)factor);
+            TenantData proposal = new TenantData(randomTrait, worth);
             return proposal;
         }
 
