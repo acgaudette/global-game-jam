@@ -76,10 +76,10 @@ namespace Gameplay
         void Update()
         {
             if (movementQueue.Count > 0)
-            {   
-            //Remove destination if arrived
+            {
+                //Remove destination if arrived
                 if (Vector3.Distance(transform.position, movementQueue[0]) < 0.01f)
-                { 
+                {
                     movementQueue.RemoveAt(0);
                 }
                 //Movement
@@ -118,44 +118,16 @@ namespace Gameplay
 
             label.text = "$" + data.worth;
         }
-
-        void OnCollisionEnter(Collision collision)
-        { 
-            /*
-            if (collision.gameObject.CompareTag("Tenant"))
-            {
-                if (collision.gameObject.transform.z > transform.z)
-                {
-
-                }
-            }
-            */
-        }
     }
-
-    // Class for tenant data, e.g. for not-yet-rendered tenant proposals
-    [System.Serializable]
+    
     public class TenantData
     {
+        public float worth;
         public Trait trait;
-        public uint worth;
-
-        public TenantData(Trait trait, uint worth)
+        public TenantData(float w, Trait data)
         {
-            this.trait = trait;
-            this.worth = worth;
-        }
-
-        public bool Conflicts(TenantData other)
-        {
-            // Undirected
-            return trait.data.hates == other.trait.data.title
-                || trait.data.title == other.trait.data.hates;
-        }
-
-        public override string ToString()
-        {
-            return trait.data.title + "\n$" + worth;
+            worth = w;
+            trait = data;
         }
     }
 }

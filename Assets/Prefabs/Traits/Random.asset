@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f24c880ec023b1169b8291d40561954, type: 3}
+  m_Name: Random
+  m_EditorClassIdentifier: 
+  TraitName: Random
+  TraitID: 0
+  Sprites: {fileID: 0}
+  Icon: {fileID: 2800000, guid: 960c81577fbfd453d8ea22cbe080604d, type: 3}
+  Description: Hates Dinos
+  Hate: {fileID: 11400000, guid: 088203994735bf048b694f62e66f1b5e, type: 2}
+  HateSpeech: '...'
+  TraitColor: {r: 0.7830189, g: 0.0110804355, b: 0.0110804355, a: 1}
