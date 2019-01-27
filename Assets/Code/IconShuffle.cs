@@ -13,10 +13,13 @@ public class IconShuffle : MonoBehaviour
     public bool accept;
     public bool reject;
     public bool reset;
+    public GameObject bubbles;
+    public float appearAt;
 
     private void Start()
     {
         gameObject.transform.position = leftNode.position;
+        bubbles.SetActive(false);
     }
 
     private void Update()
@@ -37,24 +40,29 @@ public class IconShuffle : MonoBehaviour
         {
             ResetTenant();
         }
+
     }
 
     public void LoadTenant()
     {
         gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, middleNode.position, 8 * Time.deltaTime);
+        if (gameObject.transform.localPosition.x >= appearAt)
+        {
+            bubbles.SetActive(true);
+        }
     }
 
     public void AcceptTenant()
     {
-        gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, rightNode.position, 5 * Time.deltaTime);
-
+        gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, rightNode.position, 6.5f * Time.deltaTime);
+        bubbles.SetActive(false);
     }
 
     public void RejectTenant()
     {
         load = false;
-        gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, leftNode.position, 5 * Time.deltaTime);
-
+        gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, leftNode.position, 6.5f * Time.deltaTime);
+        bubbles.SetActive(false);
     }
 
     public void ResetTenant ()
@@ -64,6 +72,7 @@ public class IconShuffle : MonoBehaviour
         reject = false;
         gameObject.transform.position = leftNode.position;
         reset = false;
+        bubbles.SetActive(false);
     }
 }
 
