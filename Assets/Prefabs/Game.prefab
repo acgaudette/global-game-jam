@@ -44,46 +44,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   traitPool:
-  - title: fish
-    debugColor: {r: 0.17799926, g: 0.344155, b: 0.9433962, a: 1}
-    hates: aliens
-  - title: aliens
-    debugColor: {r: 0.29049483, g: 0.8936768, b: 0.9056604, a: 1}
-    hates: fish
-  - title: dinosaurs
-    debugColor: {r: 0, g: 0.8113208, b: 0.1399926, a: 1}
-    hates: illuminati
-  - title: illuminati
-    debugColor: {r: 0.8427139, g: 1, b: 0.24528301, a: 1}
-    hates: dinosaurs
-  - title: blood
-    debugColor: {r: 0.6981132, g: 0, b: 0, a: 1}
-    hates: skeletons
-  - title: skeletons
-    debugColor: {r: 0.8490566, g: 0.83594924, b: 0.5366678, a: 1}
-    hates: blood
-  - title: the L train
-    debugColor: {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 1}
-    hates: teeth
-  - title: teeth
-    debugColor: {r: 1, g: 0.3207547, b: 0.6599492, a: 1}
-    hates: the L train
-  - title: VR
-    debugColor: {r: 0, g: 0, b: 0, a: 1}
-    hates: hypebeast
-  - title: hypebeast
-    debugColor: {r: 1, g: 0, b: 0, a: 1}
-    hates: VR
-  - title: snakes
-    debugColor: {r: 0.7264151, g: 0.5123476, b: 0.35635456, a: 1}
-    hates: memes
-  - title: memes
-    debugColor: {r: 0.6320754, g: 0.33392665, b: 0.621516, a: 1}
-    hates: snakes
+  - {fileID: 11400000, guid: 511c89e3547eb4414b5acf01d5bce4c9, type: 2}
+  - {fileID: 11400000, guid: 4ac505702cf0748b1b82550cabb5cfae, type: 2}
+  - {fileID: 11400000, guid: 088203994735bf048b694f62e66f1b5e, type: 2}
+  - {fileID: 11400000, guid: 48aab74a0dba543908a807d417aa2600, type: 2}
+  - {fileID: 11400000, guid: 8cc09158c405f4ddbb00f17b8d917799, type: 2}
+  - {fileID: 11400000, guid: 1e4b915f3e7294836beda25a6a11fef9, type: 2}
+  - {fileID: 11400000, guid: e82d578db80974d8b9ee21ccb502b037, type: 2}
+  - {fileID: 11400000, guid: d37db577adf664bd89474240c2e82da0, type: 2}
+  - {fileID: 11400000, guid: 17a4115fcbe38448ca770a3ac8f6a580, type: 2}
+  - {fileID: 11400000, guid: 18fe605b6018c4f60acbd5f51d81ed6d, type: 2}
+  - {fileID: 11400000, guid: 112734666a963432eafd96a37e4a7c23, type: 2}
+  - {fileID: 11400000, guid: b8af273b1627a469099b5cbf234e8a14, type: 2}
   timeLimit: 25
   decidePause: 0.25
   decidePunishPause: 0.75
-  startingRent: 200
+  startingRent: 100
   rentIncreaseFactor: 0.8
   startingCash: 0
   startingCap: 2
@@ -95,19 +71,13 @@ MonoBehaviour:
   deciding: 0
   decidingTimer: 0
   proposal:
-    trait:
-      data:
-        title: 
-        debugColor: {r: 1, g: 1, b: 1, a: 1}
-        hates: 
     worth: 0
+    trait: {fileID: 0}
   rent: 0
   cash: 0
-  tenantPrefab: {fileID: 2399925898005599490, guid: f523abc3976566de5a5b572e33156830,
+  kicked: 0
+  tenantPrefab: {fileID: 2399925898005599490, guid: 1e32abcbcbc6f6e4b8ac495f8f81a4d2,
     type: 3}
   spawnPoint: {fileID: 0}
-  scoreText: {fileID: 0}
-  timerText: {fileID: 0}
-  proposalText: {fileID: 0}
-  decisionText: {fileID: 0}
-  extraText: {fileID: 0}
+  ui: {fileID: 0}
+  audioM: {fileID: 0}
