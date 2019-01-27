@@ -18,6 +18,8 @@ namespace Gameplay
         public RawImage PortraitIcon;
         public RawImage HateIcon;
         public Text Value;
+        public Color defaultTextColor = Color.white;
+        public Color warnTextColor = Color.red;
 
         Vector3 timerPosition;
         Vector3 valuePosition;
@@ -65,10 +67,10 @@ namespace Gameplay
             Rent.text = "$" + rent.ToString();
 
             Money.color = cash >= rent ?
-                Color.white : Color.red;
+                defaultTextColor : warnTextColor;
 
             if (seconds < 5) {
-                Timer.color = Color.red;
+                Timer.color = warnTextColor;
                 Timer.fontSize = 90;
 
                 // Shake
@@ -76,7 +78,7 @@ namespace Gameplay
                 Timer.transform.position = timerPosition
                     + new Vector3(shake.x, shake.y, 0);
             } else {
-                Timer.color = Color.white;
+                Timer.color = defaultTextColor;
                 Timer.fontSize = 72;
                 Timer.transform.position = timerPosition;
             }
@@ -105,7 +107,7 @@ namespace Gameplay
         public void Gameover()
         {
             // Reset timer data
-            //Timer.color = Color.white;
+            //Timer.color = defaultTextColor;
             Timer.fontSize = 72;
             Timer.transform.position = timerPosition;
 
