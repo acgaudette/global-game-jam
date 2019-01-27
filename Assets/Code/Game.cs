@@ -67,6 +67,7 @@ namespace Gameplay {
                 rent = startingRent;
                 proposal = GenerateProposal();
                 gameOver = false;
+                endingAudio.gameOver = false;
 
                 // Clear tenants
                 foreach (var tenant in tenants) {
@@ -80,6 +81,7 @@ namespace Gameplay {
 
             if (gameOver) {
                 ui.Gameover();
+                endingAudio.gameOver = true;
                 return;
             }
 
