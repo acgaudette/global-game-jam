@@ -3484,116 +3484,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
         type: 3}
-      propertyPath: traitPool.Array.size
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
-        type: 3}
       propertyPath: spawnPoint
       value: 
       objectReference: {fileID: 1692152781}
-    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
-        type: 3}
-      propertyPath: scoreText
-      value: 
-      objectReference: {fileID: 1354716756}
-    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
-        type: 3}
-      propertyPath: timerText
-      value: 
-      objectReference: {fileID: 163273976}
-    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
-        type: 3}
-      propertyPath: proposalText
-      value: 
-      objectReference: {fileID: 1607335145}
-    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
-        type: 3}
-      propertyPath: decisionText
-      value: 
-      objectReference: {fileID: 1700702972}
-    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
-        type: 3}
-      propertyPath: traitPool.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 511c89e3547eb4414b5acf01d5bce4c9,
-        type: 2}
-    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
-        type: 3}
-      propertyPath: traitPool.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: 4ac505702cf0748b1b82550cabb5cfae,
-        type: 2}
-    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
-        type: 3}
-      propertyPath: extraText
-      value: 
-      objectReference: {fileID: 2044977738}
-    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
-        type: 3}
-      propertyPath: traitPool.Array.data[2]
-      value: 
-      objectReference: {fileID: 11400000, guid: 088203994735bf048b694f62e66f1b5e,
-        type: 2}
-    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
-        type: 3}
-      propertyPath: traitPool.Array.data[3]
-      value: 
-      objectReference: {fileID: 11400000, guid: 48aab74a0dba543908a807d417aa2600,
-        type: 2}
-    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
-        type: 3}
-      propertyPath: traitPool.Array.data[4]
-      value: 
-      objectReference: {fileID: 11400000, guid: 8cc09158c405f4ddbb00f17b8d917799,
-        type: 2}
-    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
-        type: 3}
-      propertyPath: traitPool.Array.data[5]
-      value: 
-      objectReference: {fileID: 11400000, guid: 1e4b915f3e7294836beda25a6a11fef9,
-        type: 2}
-    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
-        type: 3}
-      propertyPath: traitPool.Array.data[6]
-      value: 
-      objectReference: {fileID: 11400000, guid: e82d578db80974d8b9ee21ccb502b037,
-        type: 2}
-    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
-        type: 3}
-      propertyPath: traitPool.Array.data[7]
-      value: 
-      objectReference: {fileID: 11400000, guid: d37db577adf664bd89474240c2e82da0,
-        type: 2}
-    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
-        type: 3}
-      propertyPath: traitPool.Array.data[8]
-      value: 
-      objectReference: {fileID: 11400000, guid: 17a4115fcbe38448ca770a3ac8f6a580,
-        type: 2}
-    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
-        type: 3}
-      propertyPath: traitPool.Array.data[9]
-      value: 
-      objectReference: {fileID: 11400000, guid: 18fe605b6018c4f60acbd5f51d81ed6d,
-        type: 2}
-    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
-        type: 3}
-      propertyPath: traitPool.Array.data[10]
-      value: 
-      objectReference: {fileID: 11400000, guid: 112734666a963432eafd96a37e4a7c23,
-        type: 2}
-    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
-        type: 3}
-      propertyPath: traitPool.Array.data[11]
-      value: 
-      objectReference: {fileID: 11400000, guid: b8af273b1627a469099b5cbf234e8a14,
-        type: 2}
-    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
-        type: 3}
-      propertyPath: audioM
-      value: 
-      objectReference: {fileID: 1364281250}
     - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
         type: 3}
       propertyPath: ui
@@ -3601,10 +3494,9 @@ PrefabInstance:
       objectReference: {fileID: 417822581}
     - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
         type: 3}
-      propertyPath: tenantPrefab
+      propertyPath: audioM
       value: 
-      objectReference: {fileID: 2399925898005599490, guid: 1e32abcbcbc6f6e4b8ac495f8f81a4d2,
-        type: 3}
+      objectReference: {fileID: 1364281250}
     - target: {fileID: 3630413605010961370, guid: d97870e1f2bacaef0a02add1616e17a1,
         type: 3}
       propertyPath: m_LocalPosition.x
