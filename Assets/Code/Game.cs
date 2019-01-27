@@ -80,6 +80,7 @@ namespace Gameplay {
                 
                         tenants.Clear();
                         ui.GameoverScreen.SetActive(false);
+                        endingAudio.gameOver = false;
                     Debug.Log("Restarted game");
                     }
                 return;

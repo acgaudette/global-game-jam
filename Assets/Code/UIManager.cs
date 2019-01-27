@@ -112,7 +112,7 @@ namespace Gameplay
             Timer.transform.position = timerPosition;
 
             Timer.text = "00 : 00";
-            if (!GameoverScreen.active)
+            if (!GameoverScreen.activeSelf)
             {
                 GameoverScreen.GetComponent<GameoverAnim>().playAnim();
                 GameoverScreen.SetActive(true);

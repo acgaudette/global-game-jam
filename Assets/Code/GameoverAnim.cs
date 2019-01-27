@@ -8,21 +8,33 @@ public class GameoverAnim : MonoBehaviour
     float animFraction;
     Vector3 final;
     public float animTime;
-    public GameObject Gameover;
+    public GameObject Game;
+    public GameObject Over;
     public GameObject Tryagain;
+    public GameObject Dash;
+
+    Vector3 GameRotation;
+    Vector3 OverRotation;
+    Vector3 larger;
     
     public void Start()
     {
         elapsed = 0.0f;
         final = new Vector3(1.0f, 1.0f, 1.0f);
-        
+        GameRotation = new Vector3(0.0f, 0.0f, -25f);
+        OverRotation = new Vector3(0.0f, 0.0f, 25f);
+        larger = new Vector3(1.2f, 1.2f, 1.2f);
     }
 
     public void playAnim()
     {
         elapsed = 0.0f;
-        Gameover.transform.localScale = Vector3.zero;
+        endingAudio.gameOver = true;
+        Game.transform.localScale = Vector3.zero;
+        Over.transform.localScale = Vector3.zero;
         Tryagain.transform.localScale = Vector3.zero;
+        Dash.transform.localScale = Vector3.zero;
+        
     }
 
     void Update()
@@ -31,9 +43,17 @@ public class GameoverAnim : MonoBehaviour
         animFraction = elapsed / animTime;
         if (animFraction < 1.0f)
         {
-            Gameover.transform.localScale = Vector3.Slerp(Vector3.zero, final, animFraction);
+            Game.transform.localScale = Vector3.Slerp(Vector3.zero, final, animFraction);
+            Game.transform.localEulerAngles = Vector3.Slerp(GameRotation, Vector3.zero, animFraction);
+            Over.transform.localScale = Vector3.Slerp(Vector3.zero, final, animFraction);
+            Over.transform.localEulerAngles = Vector3.Slerp(OverRotation, Vector3.zero, animFraction);
             Tryagain.transform.localScale = Vector3.Slerp(Vector3.zero, final, animFraction);
-            Debug.Log(animFraction);
+            Dash.transform.localScale = Vector3.Slerp(Vector3.zero, final, animFraction);
+        }
+        else
+        {
+            Game.transform.localScale = Vector3.Slerp(final, larger, Mathf.Cos(animFraction));
+            Over.transform.localScale = Vector3.Slerp(final, larger, Mathf.Cos(animFraction));
         }
     }
 }
