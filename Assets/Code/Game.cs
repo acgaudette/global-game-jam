@@ -35,20 +35,12 @@ namespace Gameplay {
         [Header("Scene")]
 
         public Transform spawnPoint;
-
-        public Text scoreText;
-        public Text timerText;
-        public Text proposalText;
-        public Text decisionText;
-        public Text extraText;
+        public UIManager ui;
 
         void Awake() {
             timer = timeLimit;
             rent = startingRent;
             cash = startingCash;
-            proposalText.text = "";
-            decisionText.text = "";
-            extraText.text = "";
         }
 
         void Update() {
@@ -62,7 +54,6 @@ namespace Gameplay {
                 cash = startingCash;
                 rent = startingRent;
                 proposal = GenerateProposal();
-                UpdateProposalUI(proposal);
                 gameOver = false;
 
                 // Clear tenants
@@ -76,7 +67,7 @@ namespace Gameplay {
             }
 
             if (gameOver) {
-                timerText.text = "GAME OVER";
+                ui.Gameover();
                 return;
             }
 
@@ -120,10 +111,7 @@ namespace Gameplay {
                     tenant.Enter();
                     tenant.Wander();
 
-                    // UI
-                    proposalText.text = "ACCEPT!";
-                    decisionText.text = "";
-                    extraText.text = "";
+                    ui.Accept();
 
                     deciding = false;
                     Debug.Log("Accepted tenant");
@@ -157,18 +145,12 @@ namespace Gameplay {
                         // Punish with larger timer
                         decidingTimer = decidePunishPause;
 
-                        // UI
-                        proposalText.text = "CONFLICTS!";
                     }
                 }
 
                 // Decision: NO trigger
                 if (Input.GetKeyDown(KeyCode.LeftArrow)) {
-                    // UI
-                    proposalText.text = "REJECT!";
-                    decisionText.text = "";
-                    extraText.text = "";
-
+                    ui.Reject();
                     deciding = false;
                     Debug.Log("Rejected tenant");
                 }
@@ -189,15 +171,7 @@ namespace Gameplay {
             }
 
             /* UI */
-
-            scoreText.text = ""
-                + "Month " + month + ": $" + rent.ToString("N0")
-                + "\n"
-                + "$" + cash.ToString("N0");
-
-            int seconds = Mathf.FloorToInt(timer);
-            float remainder = Mathf.Round((timer % 1) * 100);
-            timerText.text = seconds + ":" + remainder.ToString("00");
+            ui.TimeAndScore(timer, month, cash, rent);
         }
 
         // Procedurally-generate new tenant proposal
@@ -216,15 +190,8 @@ namespace Gameplay {
 
             Debug.Log(worth);
             TenantData proposal = new TenantData(worth, data);
+            ui.UpdateProposalUI(proposal);
             return proposal;
-        }
-
-        void UpdateProposalUI(TenantData proposal) {
-            proposalText.text = "Proposal:";
-            decisionText.text = proposal.trait.TraitName;
-            decisionText.color = proposal.trait.TraitColor;
-            extraText.text = proposal.trait.HateSpeech;
-            extraText.color = proposal.trait.Hate.TraitColor;
         }
     }
 }
