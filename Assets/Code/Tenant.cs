@@ -114,6 +114,17 @@ namespace Gameplay
                 }
             }
 
+            // Z computation
+            float yPct = (transform.position.y - minY) / (maxY - minY);
+            float z = yPct * (maxZ - minZ) + minZ;
+
+            transform.position = new Vector3(
+                transform.position.x,
+                transform.position.y,
+                z
+            );
+
+
             // Debug label
             var label = transform.GetChild(0).GetComponent<TextMesh>();
             label.text = "$" + data.worth;
@@ -121,7 +132,6 @@ namespace Gameplay
     }
 
     [System.Serializable]
-    
     public class TenantData
     {
         public float worth;
