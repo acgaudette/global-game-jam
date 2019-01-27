@@ -175,7 +175,7 @@ namespace Gameplay {
                 // Decision: initiate
                 if (decidingTimer < 0) {
                     proposal = GenerateProposal();
-                    UpdateProposalUI(proposal);
+                    ui.UpdateProposalUI(proposal);
                     decidingTimer = decidePause;
 
                     deciding = true;
