@@ -48,8 +48,10 @@ namespace Gameplay
             if (lastProposal > 0) {
                 float factor = lastProposal / 100;
                 Vector2 shake = Random.insideUnitCircle * 9 * factor;
+                /*
                 Value.transform.position = valuePosition
                     + new Vector3(shake.x, shake.y, 0);
+                */
             } else {
                 Value.transform.position = valuePosition;
             }
