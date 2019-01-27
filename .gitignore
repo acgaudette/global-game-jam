@@ -17,6 +17,7 @@ obj/
 *.suo
 /*.sln
 /*.vs
+/*.idea
 *.user
 *.unityproj
 *.booproj
