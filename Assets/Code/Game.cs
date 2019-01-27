@@ -4,34 +4,43 @@ using System.Collections.Generic;
 
 namespace Gameplay {
     public class Game: MonoBehaviour {
-        public Tenant tenantPrefab;
-        public Transform spawnPoint;
         public List<TraitData> traitPool;
-        public List<Tenant> tenants;
 
         public float timeLimit = 60;
-        public float timer;
-        public uint month = 1;
-        public bool gameOver = false;
 
-        public bool deciding = false;
         public float decidePause = 0.25f;
         public float decidePunishPause = 1;
-        public float decidingTimer;
-        public TenantData proposal;
 
         public uint startingRent = 10000;
         public uint startingCash = 10000;
         public float rentIncreaseFactor = 1.5f;
         public float cashDecreaseFactor = 0.8f;
-        public float rent;
-        public float cash;
 
         // Random generation
         public uint startingCap = 2;
         public uint maxFactor = 8;
         public AnimationCurve factorCurve;
         public uint[] worths;
+
+        [Header("Read-only")]
+
+        public List<Tenant> tenants;
+        public float timer;
+        public uint month = 1;
+        public bool gameOver = false;
+        public bool deciding = false;
+        public float decidingTimer;
+        public TenantData proposal;
+        public float rent;
+        public float cash;
+
+        [Header("Assets")]
+
+        public Tenant tenantPrefab;
+
+        [Header("Scene")]
+
+        public Transform spawnPoint;
 
         public Text scoreText;
         public Text timerText;
