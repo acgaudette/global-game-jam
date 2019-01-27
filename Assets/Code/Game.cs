@@ -204,9 +204,9 @@ namespace Gameplay {
             /* UI */
 
             scoreText.text = ""
-                + "Month " + month + ": $" + cash.ToString("N0")
+                + "Month " + month + ": $" + rent.ToString("N0")
                 + "\n"
-                + "$" + rent.ToString("N0") + "/mo.";
+                + "$" + cash.ToString("N0");
 
             int seconds = Mathf.FloorToInt(timer);
             float remainder = Mathf.Round((timer % 1) * 100);
