@@ -22,8 +22,8 @@ namespace Gameplay
         public void UpdateProposalUI(TenantData proposal)
         {
             PortraitIcon.texture = proposal.trait.Icon;
-            HateIcon.texture = proposal.trait.Hate.Icon;
-            Value.text = proposal.worth.ToString();
+            HateIcon.texture = proposal.trait.Hate.SpriteIcon;
+            Value.text = "$" + proposal.worth.ToString();
 
             PortraitName.text = proposal.trait.TraitName;
             PortraitName.color = proposal.trait.TraitColor;
@@ -39,7 +39,7 @@ namespace Gameplay
 
             Month.text = "Month: " + month.ToString();
             Money.text = "$" + cash.ToString();
-            Rent.text = "$ " + rent.ToString();
+            Rent.text = "$" + rent.ToString();
         }
 
         public void Conflict()

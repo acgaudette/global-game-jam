@@ -15,8 +15,7 @@ MonoBehaviour:
   TraitName: Dino
   TraitID: 2
   Sprites: {fileID: 0}
-  Icon: {fileID: 2800000, guid: 3fc49d9f4c8f940b893ea1cac36664cc, type: 3}
-  Description: Loves Dino
+  Icon: {fileID: 2800000, guid: 960c81577fbfd453d8ea22cbe080604d, type: 3}
+  SpriteIcon: {fileID: 2800000, guid: 66539fe17cd6e4f19a5aaea14a5d6a20, type: 3}
   Hate: {fileID: 11400000, guid: 48aab74a0dba543908a807d417aa2600, type: 2}
-  HateSpeech: ?!
   TraitColor: {r: 0.003610152, g: 0.8490566, b: 0, a: 1}

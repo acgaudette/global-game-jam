@@ -13,6 +13,8 @@ namespace Gameplay {
         [SerializeField]
         public Texture2D Icon;
         [SerializeField]
+        public Texture2D SpriteIcon;
+        [SerializeField]
         public Trait Hate;
         [SerializeField]
         public Color TraitColor;
