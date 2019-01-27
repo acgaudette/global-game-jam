@@ -119,18 +119,8 @@ namespace Gameplay {
                     );
 
                     // Audio
-                    int index = 0;
-
-                    for (int i = 0; i < traitPool.Count; ++i) {
-                        if (traitPool[i] == proposal.trait) {
-                            index = i;
-                            break;
-                        }
-                    }
-
                     audioM.makeSource(
-                        //proposal.trait... // TODO
-                        index,
+                        proposal.trait.TraitID,
                         tenant.transform
                     );
 
