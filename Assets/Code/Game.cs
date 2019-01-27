@@ -87,10 +87,6 @@ namespace Gameplay {
             }
 
             if (timer < 0.0) {
-                ++month;
-                //rent = startingRent * (rentIncreaseFactor * month);
-                cash = startingCash * Mathf.Pow(cashDecreaseFactor, month);
-
                 if (cash >= rent) {
                     Debug.Log("Rent paid");
                 }
@@ -100,6 +96,10 @@ namespace Gameplay {
                     Debug.Log("Game over");
                     gameOver = true;
                 }
+
+                ++month;
+                //rent = startingRent * (rentIncreaseFactor * month);
+                cash = startingCash * Mathf.Pow(cashDecreaseFactor, month);
 
                 timer = timeLimit;
             }
