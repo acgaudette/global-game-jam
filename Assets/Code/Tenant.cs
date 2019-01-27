@@ -16,6 +16,7 @@ namespace Gameplay
         public float waitTime;
         public float speed;
         public float exitSpeed;
+        public float targetReachRange = 0.4f;
 
         //Floor bounds
         public float minX;
