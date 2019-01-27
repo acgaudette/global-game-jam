@@ -84,18 +84,18 @@ MonoBehaviour:
     debugColor: {r: 0.6320754, g: 0.33392665, b: 0.621516, a: 1}
     hates: snakes
   tenants: []
-  timeLimit: 30
+  timeLimit: 25
   timer: 0
   month: 1
   gameOver: 0
   deciding: 0
   decidePause: 0.25
-  decidePunishPause: 0.25
+  decidePunishPause: 0.75
   decidingTimer: 0
   proposal:
     traits: []
     worth: 0
-  startingRent: 300
+  startingRent: 200
   startingCash: 0
   rentIncreaseFactor: 0.8
   cashDecreaseFactor: 0.8
@@ -127,6 +127,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  worths: 00000000050000000a000000140000001e00000028000000320000003c00000046000000500000005a00000064000000
   scoreText: {fileID: 0}
   timerText: {fileID: 0}
   proposalText: {fileID: 0}
