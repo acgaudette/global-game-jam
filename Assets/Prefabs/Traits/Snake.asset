@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f24c880ec023b1169b8291d40561954, type: 3}
+  m_Name: Snake
+  m_EditorClassIdentifier: 
+  TraitName: Snake
+  TraitID: 0
+  Sprites: {fileID: 0}
+  Icon: {fileID: 2800000, guid: 209faca289e9f4fe09ad2485b7dea916, type: 3}
+  Description: Loves snek
+  Hate: {fileID: 0}
+  HateSpeech: 
+  TraitColor: {r: 0.034131378, g: 0.5566038, b: 0.10992973, a: 0}
