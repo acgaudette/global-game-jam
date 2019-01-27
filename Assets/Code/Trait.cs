@@ -1,19 +1,39 @@
 using UnityEngine;
 
 namespace Gameplay {
-    [System.Serializable]
-    public class Trait {
-        public TraitData data;
+    [CreateAssetMenu(fileName = "New Trait", menuName = "Trait Data")]
+    public class Trait : ScriptableObject
+    {
+        [SerializeField]
+        public string TraitName;
+        [SerializeField]
+        public int TraitID;
+        [SerializeField]
+        public Texture2D Sprites;
+        [SerializeField]
+        public Texture2D Icon;
+        [SerializeField]
+        public string Description;
+        [SerializeField]
+        public Trait Hate;
+        [SerializeField]
+        public string HateSpeech;
+        [SerializeField]
+        public Color TraitColor;
 
-        public Trait(TraitData data) {
-            this.data = data;
+        public bool Conflicts(Trait other)
+        {
+            if (other == this)
+            {
+                return false;
+            }
+            if (Hate == other || other.Hate == this)
+            {
+                return true;
+            }
+            return false;
         }
-    }
 
-    [System.Serializable]
-    public class TraitData {
-        public string title;
-        public Color debugColor = Color.white;
-        public string hates;
+        //Music & other assests
     }
 }

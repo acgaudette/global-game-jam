@@ -1228,6 +1228,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
         type: 3}
+      propertyPath: traitPool.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
+        type: 3}
       propertyPath: spawnPoint
       value: 
       objectReference: {fileID: 1692152781}
@@ -1256,5 +1261,17 @@ PrefabInstance:
       propertyPath: extraText
       value: 
       objectReference: {fileID: 809577363}
+    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
+        type: 3}
+      propertyPath: traitPool.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7015d0a492abd7f4c8a0614f6f8972d2,
+        type: 2}
+    - target: {fileID: 3630413605010961365, guid: d97870e1f2bacaef0a02add1616e17a1,
+        type: 3}
+      propertyPath: traitPool.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 088203994735bf048b694f62e66f1b5e,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d97870e1f2bacaef0a02add1616e17a1, type: 3}

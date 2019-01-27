@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Gameplay {
     public class Game: MonoBehaviour {
-        public List<TraitData> traitPool;
+        public List<Trait> traitPool;
         public float timeLimit = 25;
         public float decidePause = .25f;
         public float decidePunishPause = .75f;
@@ -118,7 +118,7 @@ namespace Gameplay {
 
                     tenant.data = proposal;
                     tenant.GetComponent<SpriteRenderer>().color
-                        = tenant.data.trait.data.debugColor;
+                        = proposal.trait.TraitColor;
                     tenants.Add(tenant);
                     tenant.Enter();
                     tenant.Wander();
@@ -137,7 +137,7 @@ namespace Gameplay {
 
                     // Search for conflicts with new tenant
                     foreach (var resident in tenants) {
-                        if (tenant.data.Conflicts(resident.data)) {
+                        if (tenant.data.trait.Conflicts(resident.data.trait)) {
                             kickList.Add(resident);
                         }
                     }
@@ -210,31 +210,27 @@ namespace Gameplay {
         TenantData GenerateProposal() {
             int limit = Mathf.Min(traitPool.Count, (int)(startingCap * month));
             int randomIndex = Random.Range(0, limit);
-            TraitData data = traitPool[randomIndex];
-            Trait randomTrait = new Trait(data);
-
+            Trait data = traitPool[randomIndex];
             uint count = 0;
             foreach (var tenant in tenants) {
-                if (tenant.data.trait.data.title == data.title) {
+                if (tenant.data.trait.TraitID == data.TraitID) {
                     ++count;
                 }
             }
             int index = Mathf.Min((int)count, worths.Length - 1);
             uint worth = worths[index];
 
-            TenantData proposal = new TenantData(randomTrait, worth);
+            Debug.Log(worth);
+            TenantData proposal = new TenantData(worth, data);
             return proposal;
         }
 
         void UpdateProposalUI(TenantData proposal) {
             proposalText.text = "Proposal:";
-            decisionText.text = proposal.ToString();
-            decisionText.color = proposal.trait.data.debugColor;
-            extraText.text = "(Hates "
-                + proposal.trait.data.hates + ")";
-            extraText.color = traitPool.Find(
-                x => x.title == proposal.trait.data.hates
-            ).debugColor;
+            decisionText.text = proposal.trait.TraitName;
+            decisionText.color = proposal.trait.TraitColor;
+            extraText.text = proposal.trait.HateSpeech;
+            extraText.color = proposal.trait.Hate.TraitColor;
         }
     }
 }
