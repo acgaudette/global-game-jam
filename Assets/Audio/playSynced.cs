@@ -14,6 +14,8 @@ public class playSynced : MonoBehaviour
 
     public static bool panFlip;
 
+    public bool fadedIn;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,9 +42,15 @@ public class playSynced : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(audSrc.volume <1)
+        if(audSrc.volume <1 && !fadedIn)
         {
             audSrc.volume += .055f;
+            
+        }
+
+        if (audSrc.volume >.99f)
+        {
+            fadedIn = true;
         }
 
 

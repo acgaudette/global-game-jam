@@ -27,12 +27,33 @@ namespace Gameplay
         public float maxZ;
 
         bool isInHouse;
+        
+        AudioSource childAudioSource;
 
+
+        public bool fadingOutAudio;
+        
         void Awake()
         {
             movementQueue = new List<Vector2>();
             entry = GameObject.FindGameObjectWithTag("Entry");
             isInHouse = true;
+            
+            
+        }
+
+        void Start()
+        {
+            
+            Debug.Log(transform.childCount);
+            
+        
+
+            if (transform.childCount >1 && transform.GetChild(1).GetComponent<AudioSource>())
+            {
+                childAudioSource = transform.GetChild(1).GetComponent<AudioSource>();
+            }
+            
         }
 
         public void Wander()
@@ -46,6 +67,7 @@ namespace Gameplay
             movementQueue.Clear();
             movementQueue.Add(entry.transform.position);
             isInHouse = false;
+            fadingOutAudio = true;
         }
 
         public void Enter()
@@ -128,6 +150,18 @@ namespace Gameplay
             // Debug label
             var label = transform.GetChild(0).GetComponent<TextMesh>();
             label.text = "$" + data.worth;
+
+            if (fadingOutAudio)
+            {
+                //transform.Find("tenantSource(Clone)").GetComponent<AudioSource>().volume -= .055f;
+                //transform.GetChild(1).GetComponent<AudioSource>().volume -= .055f;
+                if (transform.childCount > 1)
+                {
+                    print("fading");
+                    childAudioSource.volume -= .035f;
+   
+                } 
+            }
         }
     }
 
