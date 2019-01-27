@@ -15,7 +15,7 @@ namespace Gameplay
 
         public IconShuffle Portrait;
         public Text PortraitName;
-        public Image PortraitIcon;
+        public RawImage PortraitIcon;
         public RawImage HateIcon;
         public Text Value;
 
