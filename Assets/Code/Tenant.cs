@@ -110,7 +110,7 @@ namespace Gameplay
             label.text = "$" + data.worth;
         }
     }
-    
+
     public class TenantData
     {
         public float worth;
