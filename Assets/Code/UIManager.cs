@@ -62,6 +62,9 @@ namespace Gameplay
             Money.text = "$" + cash.ToString();
             Rent.text = "$" + rent.ToString();
 
+            Money.color = cash >= rent ?
+                Color.white : Color.red;
+
             if (seconds < 5) {
                 Timer.color = Color.red;
                 Timer.fontSize = 90;
