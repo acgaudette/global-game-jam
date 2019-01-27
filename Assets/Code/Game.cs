@@ -31,6 +31,7 @@ namespace Gameplay {
         public uint startingCap = 2;
         public uint maxFactor = 8;
         public AnimationCurve factorCurve;
+        public uint[] worths;
 
         public Text scoreText;
         public Text timerText;
@@ -238,10 +239,12 @@ namespace Gameplay {
                     ++count;
                 }
             }
+            int index = Mathf.Min((int)count, worths.Length - 1);
 
-            int factor = Mathf.Min((int)count * 10, 100);
+            //int factor = Mathf.Min((int)count * 10, 100);
+            uint worth = worths[index];
 
-            TenantData proposal = new TenantData(randomTrait, (uint)factor);
+            TenantData proposal = new TenantData(randomTrait, worth);
             return proposal;
         }
 
