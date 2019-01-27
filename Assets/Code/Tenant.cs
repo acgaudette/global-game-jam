@@ -107,12 +107,16 @@ namespace Gameplay
 
             // Debug label
             var label = transform.GetChild(0).GetComponent<TextMesh>();
+            /*
             if (data.valueFactor > 1) {
                 label.text = data.valueFactor + "x";
                     //+ "\n" + (data.traits[0].like ? ":)" : ":(");
             } else {
                 label.text = "";
             }
+            */
+
+            label.text = "$" + data.worth;
         }
 
         void OnCollisionEnter(Collision collision)
@@ -135,13 +139,13 @@ namespace Gameplay
     {
         // Note: class is hardcoded for only a single trait
         public List<Trait> traits;
-        public float valueFactor;
+        public uint worth;
 
-        public TenantData(Trait trait, float valueFactor)
+        public TenantData(Trait trait, uint worth)
         {
             traits = new List<Trait>();
             traits.Add(trait);
-            this.valueFactor = valueFactor;
+            this.worth = worth;
         }
 
         public bool Conflicts(TenantData other)
@@ -165,7 +169,8 @@ namespace Gameplay
             */
             return trait.data.title
                 //+ "\n(Hates " + trait.data.hates + ")";
-                + "\nValue: " + valueFactor + "x";
+                //+ "\nValue: " + valueFactor + "x";
+                + "\n$" + worth;
         }
     }
 }
