@@ -55,6 +55,10 @@ namespace Gameplay {
                 // Reset variables
                 timer = timeLimit;
                 month = 1;
+                cash = startingCash;
+                rent = startingRent;
+                proposal = GenerateProposal();
+                UpdateProposalUI(proposal);
                 gameOver = false;
 
                 // Clear tenants
