@@ -40,9 +40,10 @@ namespace Gameplay
             //switch to text later;
             Month.text = "Month: " + month.ToString();
 
-            Money.text = cash.ToString();
+            Money.text = "$" + cash.ToString();
 
-            Rent.text = rent.ToString();
+            Rent.text = "$ " + rent.ToString();
+            Debug.Log(rent.ToString());
         }
 
         public void Conflict()
