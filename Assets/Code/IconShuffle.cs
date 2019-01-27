@@ -10,7 +10,8 @@ public class IconShuffle : MonoBehaviour
     public Transform middleNode;
     public Transform rightNode;
     public bool load;
-    public bool dismiss;
+    public bool accept;
+    public bool reject;
     public bool reset;
 
     private void Start()
@@ -24,16 +25,17 @@ public class IconShuffle : MonoBehaviour
         {
             LoadTenant();
         }
-        if (dismiss)
+        if (accept)
         {
-            DismissTenant();
+            AcceptTenant();
+        }
+        if (reject)
+        {
+            RejectTenant();
         }
         if (reset)
         {
-            load = false;
-            dismiss = false;
             ResetTenant();
-            reset = false;
         }
     }
 
@@ -42,15 +44,26 @@ public class IconShuffle : MonoBehaviour
         gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, middleNode.position, 8 * Time.deltaTime);
     }
 
-    public void DismissTenant()
+    public void AcceptTenant()
     {
         gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, rightNode.position, 5 * Time.deltaTime);
 
     }
 
+    public void RejectTenant()
+    {
+        load = false;
+        gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, leftNode.position, 5 * Time.deltaTime);
+
+    }
+
     public void ResetTenant ()
     {
+        load = false;
+        accept = false;
+        reject = false;
         gameObject.transform.position = leftNode.position;
+        reset = false;
     }
 }
 
