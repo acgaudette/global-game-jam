@@ -193,17 +193,8 @@ namespace Gameplay {
                 // Decision: initiate
                 if (decidingTimer < 0) {
                     proposal = GenerateProposal();
+                    UpdateProposalUI(proposal);
                     decidingTimer = decidePause;
-
-                    // UI
-                    proposalText.text = "Proposal:";
-                    decisionText.text = proposal.ToString();
-                    decisionText.color = proposal.traits[0].data.debugColor;
-                    extraText.text = "(Hates "
-                        + proposal.traits[0].data.hates + ")";
-                    extraText.color = traitPool.Find(
-                        x => x.title == proposal.traits[0].data.hates
-                    ).debugColor;
 
                     deciding = true;
                     Debug.Log("New proposal");
@@ -238,6 +229,17 @@ namespace Gameplay {
 
             TenantData proposal = new TenantData(randomTrait, factor);
             return proposal;
+        }
+
+        void UpdateProposalUI(TenantData proposal) {
+            proposalText.text = "Proposal:";
+            decisionText.text = proposal.ToString();
+            decisionText.color = proposal.traits[0].data.debugColor;
+            extraText.text = "(Hates "
+                + proposal.traits[0].data.hates + ")";
+            extraText.color = traitPool.Find(
+                x => x.title == proposal.traits[0].data.hates
+            ).debugColor;
         }
     }
 }
