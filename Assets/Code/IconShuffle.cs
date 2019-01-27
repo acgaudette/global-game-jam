@@ -17,15 +17,29 @@ public class IconShuffle : MonoBehaviour
     public GameObject MoneyBubble;
     public GameObject HostilityBubble;
     public float appearAt;
-    public float loadspeed;
-    public float rejectspeed;
-    public float acceptspeed;
+    public float loadTime;
+    public float rejectTime;
+    public float acceptTime;
+    public float IconDisappearTime;
+    public float IconAppearTime;
+    float elapsedtime;
+    float animFraction;
+    Vector3 moneyScale;
+    Vector3 hostilityScale;
+    Vector3 startHostileAngle;
+    Vector3 startMoneyAngle;
+    Vector3 endAngle;
 
     private void Start()
     {
         gameObject.transform.position = leftNode.position;
+        moneyScale = MoneyBubble.transform.localScale;
+        hostilityScale = HostilityBubble.transform.localScale;
         MoneyBubble.transform.localScale = Vector3.zero;
         HostilityBubble.transform.localScale = Vector3.zero;
+        startMoneyAngle = new Vector3(0.0f, 0.0f, 90f);
+        startHostileAngle = new Vector3(0.0f, 0.0f, -90.0f);
+        endAngle = new Vector3(0.0f, 0.0f, 0.0f);
     }
 
     private void Update()
@@ -33,13 +47,31 @@ public class IconShuffle : MonoBehaviour
         switch (state)
         {
             case PortraitState.load:
-                LoadTenant();
+                elapsedtime += Time.deltaTime;
+                animFraction = elapsedtime / loadTime;
+                gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, middleNode.position, animFraction);
+                animFraction = elapsedtime / IconAppearTime;
+                MoneyBubble.transform.localScale = Vector3.Slerp(Vector3.zero, moneyScale, animFraction);
+                MoneyBubble.transform.localEulerAngles = Vector3.Slerp(startMoneyAngle, endAngle, animFraction);
+                HostilityBubble.transform.localScale = Vector3.Slerp(Vector3.zero, hostilityScale, animFraction);
+                HostilityBubble.transform.localEulerAngles = Vector3.Slerp(startHostileAngle, endAngle, animFraction);
                 break;
             case PortraitState.accept:
-                AcceptTenant();
+                elapsedtime += Time.deltaTime;
+                animFraction = elapsedtime / acceptTime;
+                gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, rightNode.position, animFraction);
+                animFraction = elapsedtime / IconDisappearTime;
+                MoneyBubble.transform.localScale = Vector3.Slerp(moneyScale, Vector3.zero, animFraction);
+                HostilityBubble.transform.localScale = Vector3.Slerp(hostilityScale, Vector3.zero, animFraction);
+
                 break;
             case PortraitState.reject:
-                RejectTenant();
+                elapsedtime += Time.deltaTime;
+                animFraction = elapsedtime / rejectTime;
+                gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, leftNode.position, animFraction);
+                animFraction = elapsedtime / IconDisappearTime;
+                MoneyBubble.transform.localScale = Vector3.Slerp(moneyScale, Vector3.zero, animFraction);
+                HostilityBubble.transform.localScale = Vector3.Slerp(hostilityScale, Vector3.zero, animFraction);
                 break;
             default:
                 break;
@@ -49,29 +81,19 @@ public class IconShuffle : MonoBehaviour
     public void LoadTenant()
     {
         state = PortraitState.load;
-        gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, middleNode.position, loadspeed * Time.deltaTime);
-        if (gameObject.transform.localPosition.x >= appearAt)
-        {
-            MoneyBubble.transform.localScale = Vector3.Slerp (MoneyBubble.transform.localScale, new Vector3 (1.2744f, 1.08324f, 1.2744f), 20 * Time.deltaTime);
-            HostilityBubble.transform.localScale = Vector3.Slerp(HostilityBubble.transform.localScale, new Vector3 (0.95757f, -0.95757f, 0.95757f), 20 * Time.deltaTime);
-
-        }
+        elapsedtime = 0.0f;
     }
 
     public void AcceptTenant()
     {
         state = PortraitState.accept;
-        gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, rightNode.position, acceptspeed * Time.deltaTime);
-        MoneyBubble.transform.localScale = Vector3.Slerp(MoneyBubble.transform.localScale, Vector3.zero, 100 * Time.deltaTime);
-        HostilityBubble.transform.localScale = Vector3.Slerp(HostilityBubble.transform.localScale, Vector3.zero, 100 * Time.deltaTime);
+        elapsedtime = 0.0f;   
     }
 
     public void RejectTenant()
     {
         state = PortraitState.reject;
-        gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, leftNode.position, rejectspeed * Time.deltaTime);
-        MoneyBubble.transform.localScale = Vector3.Slerp(MoneyBubble.transform.localScale, Vector3.zero, 100 * Time.deltaTime);
-        HostilityBubble.transform.localScale = Vector3.Slerp(HostilityBubble.transform.localScale, Vector3.zero, 100 * Time.deltaTime);
+        elapsedtime = 0.0f;
     }
 
     public void ResetTenant ()
