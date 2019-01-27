@@ -6,7 +6,7 @@ namespace Gameplay
 {
     public class UIManager : MonoBehaviour
     {
-        public Text Money;
+        public Text Money; // cash
         public Text Rent;
         public Text Timer;
         public Text Month;
@@ -18,6 +18,12 @@ namespace Gameplay
         public RawImage PortraitIcon;
         public RawImage HateIcon;
         public Text Value;
+
+        Vector3 timerPosition;
+
+        void Start() {
+            timerPosition = Timer.transform.position;
+        }
 
         public void UpdateProposalUI(TenantData proposal)
         {
@@ -40,6 +46,20 @@ namespace Gameplay
             Month.text = "Month " + month.ToString();
             Money.text = "$" + cash.ToString();
             Rent.text = "$" + rent.ToString();
+
+            if (seconds < 5) {
+                Timer.color = Color.red;
+                Timer.fontSize = 90;
+
+                // Shake
+                Vector2 shake = Random.insideUnitCircle * 6;
+                Timer.transform.position = timerPosition
+                    + new Vector3(shake.x, shake.y, 0);
+            } else {
+                Timer.color = Color.white;
+                Timer.fontSize = 72;
+                Timer.transform.position = timerPosition;
+            }
         }
 
         public void Conflict()
@@ -64,6 +84,11 @@ namespace Gameplay
 
         public void Gameover()
         {
+            // Reset timer data
+            //Timer.color = Color.white;
+            Timer.fontSize = 72;
+            Timer.transform.position = timerPosition;
+
             Timer.text = "GAME OVER";
         }
     }
