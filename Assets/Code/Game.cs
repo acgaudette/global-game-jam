@@ -28,6 +28,7 @@ namespace Gameplay {
         public float rent;
         public float cash;
         public bool kicked = false;
+        public bool overlay = false;
 
         public float pitchRamp;
         public float volume;
@@ -40,6 +41,7 @@ namespace Gameplay {
 
         public Transform spawnPoint;
         public UIManager ui;
+        public GameObject overlayObj;
 
         public createTenantAudio audioM;
 
@@ -54,6 +56,14 @@ namespace Gameplay {
         }
 
         void Update() {
+            /* Overlay */
+
+            //if (Input.GetKeyDown(KeyCode.Space)) {
+            if (Input.GetButtonDown("Fire1")) {
+                overlay = !overlay;
+                overlayObj.SetActive(overlay);
+            }
+
             /* Logic */
 
             kicked = false;
