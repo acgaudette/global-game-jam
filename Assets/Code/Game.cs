@@ -163,6 +163,8 @@ namespace Gameplay {
                         foreach (var kick in kickList) {
                             tenants.Remove(kick);
                             kick.Kick();
+                            // Update cash
+                            cash += kick.data.worth;
                         }
 
                         // Punish with larger timer
