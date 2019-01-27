@@ -27,6 +27,7 @@ namespace Gameplay {
         public TenantData proposal;
         public float rent;
         public float cash;
+        public bool kicked = false;
 
         [Header("Assets")]
 
@@ -53,6 +54,8 @@ namespace Gameplay {
 
         void Update() {
             /* Logic */
+
+            kicked = false;
 
             // Reset game
             if (Input.GetKeyDown(KeyCode.R)) {
@@ -159,6 +162,9 @@ namespace Gameplay {
 
                         // UI
                         proposalText.text = "CONFLICTS!";
+
+                        // Event
+                        kicked = true;
                     }
                 }
 
