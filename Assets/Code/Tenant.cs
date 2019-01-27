@@ -8,7 +8,7 @@ namespace Gameplay
     {
         public TenantData data;
 
-        List<Vector3> movementQueue;
+        List<Vector2> movementQueue;
         //Fixed locations
         GameObject entry;
 
@@ -29,7 +29,7 @@ namespace Gameplay
 
         void Awake()
         {
-            movementQueue = new List<Vector3>();
+            movementQueue = new List<Vector2>();
             entry = GameObject.FindGameObjectWithTag("Entry");
             isInHouse = true;
         }
@@ -60,16 +60,15 @@ namespace Gameplay
                 //Might want to offest by height of character, location at feet;
                 float x = Random.Range(minX, maxX);
                 float y = Random.Range(minY, maxY);
-                float z = y / (maxY - minY) * (maxZ - minZ);
-                Vector3 target = new Vector3(x, y + transform.localScale.y / 2, z);
-                Vector3 destination = target;
+
+                Vector2 target = new Vector3(x, y + transform.localScale.y / 2);
                 float d = Random.Range(1, wanderRange);
-                if (Vector3.Distance(target, transform.position) > d)
-                {
-                    destination = transform.position + (target - transform.position).normalized * d;
+                Vector2 position2D = new Vector2(transform.position.x, transform.position.y);
+                if (Vector2.Distance(target, position2D) > d) {
+                    target = position2D + (target - position2D).normalized * d;
                 }
-                //Debug.Log(destination);
-                movementQueue.Add(destination);
+
+                movementQueue.Add(target);
                 yield return new WaitForSeconds(Random.Range(1, waitTime));
             }
         }
@@ -78,13 +77,17 @@ namespace Gameplay
             if (movementQueue.Count > 0)
             {
                 //Remove destination if arrived
-                if (Vector3.Distance(transform.position, movementQueue[0]) < 0.01f)
-                {
+                Vector2 position2D = new Vector2(
+                    transform.position.x,
+                    transform.position.y
+                );
+
+                float dist = Vector2.Distance(position2D, movementQueue[0]);
+                if (dist < targetReachRange) {
                     movementQueue.RemoveAt(0);
                 }
                 //Movement
-                else
-                {
+                else {
                     float s = 0;
                     if (isInHouse)
                     {
@@ -94,7 +97,12 @@ namespace Gameplay
                     {
                         s = exitSpeed;
                     }
-                    transform.position = Vector3.MoveTowards(transform.position, movementQueue[0], s * Time.deltaTime);
+
+                    transform.position = Vector3.MoveTowards(
+                        transform.position,
+                        movementQueue[0],
+                        s * Time.deltaTime
+                    );
                 }
             }
             else
