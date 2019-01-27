@@ -97,8 +97,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   game: {fileID: 0}
   damping: 1
-  minX: -1
-  maxX: 2.5
+  minX: -3.5
+  maxX: 3.5
   minY: -0.5
   maxY: 0.5
   shakeAmount: {x: 0.4, y: 0.2}
