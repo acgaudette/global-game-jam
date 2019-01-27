@@ -78,6 +78,8 @@ namespace Gameplay {
 
             timer -= Time.deltaTime;
 
+            /*
+            // Compute rent by number of tenants
             if (tenants.Count > 0) {
                 var sum = 0f;
 
@@ -89,6 +91,7 @@ namespace Gameplay {
             } else {
                 rent = startingRent;
             }
+            */
 
             if (timer < 0.0) {
                 if (cash >= rent) {
@@ -102,8 +105,10 @@ namespace Gameplay {
                 }
 
                 ++month;
+                // Update resources at the end of the month
                 //rent = startingRent * (rentIncreaseFactor * month);
-                cash = startingCash * Mathf.Pow(cashDecreaseFactor, month);
+                //cash = startingCash * Mathf.Pow(cashDecreaseFactor, month);
+                cash = Mathf.Max(0, cash - rent);
 
                 timer = timeLimit;
             }
