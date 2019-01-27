@@ -23,7 +23,7 @@ namespace Gameplay
         {
             PortraitIcon.texture = proposal.trait.Icon;
             HateIcon.texture = proposal.trait.Hate.Icon;
-            Value.text = proposal.worth.ToString();
+            Value.text = "$" + proposal.worth.ToString();
 
             PortraitName.text = proposal.trait.TraitName;
             PortraitName.color = proposal.trait.TraitColor;
@@ -43,7 +43,7 @@ namespace Gameplay
             Money.text = "$" + cash.ToString();
 
             Rent.text = "$ " + rent.ToString();
-            Debug.Log(rent.ToString());
+            
         }
 
         public void Conflict()
