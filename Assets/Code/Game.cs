@@ -97,6 +97,14 @@ namespace Gameplay {
             if (timer < 0.0) {
                 if (cash >= rent) {
                     Debug.Log("Rent paid");
+
+                    ++month;
+                    // Update resources at the end of the month
+                    rent = startingRent * (rentIncreaseFactor * month);
+                    //cash = startingCash * Mathf.Pow(cashDecreaseFactor, month);
+                    cash = Mathf.Max(0, cash - rent);
+
+                    timer = timeLimit;
                 }
 
                 // Game over
@@ -104,14 +112,6 @@ namespace Gameplay {
                     Debug.Log("Game over");
                     gameOver = true;
                 }
-
-                ++month;
-                // Update resources at the end of the month
-                rent = startingRent * (rentIncreaseFactor * month);
-                //cash = startingCash * Mathf.Pow(cashDecreaseFactor, month);
-                cash = Mathf.Max(0, cash - rent);
-
-                timer = timeLimit;
             }
 
             if (deciding) {
