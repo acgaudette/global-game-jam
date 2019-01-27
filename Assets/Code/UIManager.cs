@@ -20,9 +20,12 @@ namespace Gameplay
         public Text Value;
 
         Vector3 timerPosition;
+        Vector3 valuePosition;
+        float lastProposal = 0;
 
         void Start() {
             timerPosition = Timer.transform.position;
+            valuePosition = Value.transform.position;
         }
 
         public void UpdateProposalUI(TenantData proposal)
@@ -35,10 +38,22 @@ namespace Gameplay
             PortraitName.color = proposal.trait.TraitColor;
             Portrait.ResetTenant();
             Portrait.LoadTenant();
+
+            lastProposal = proposal.worth;
         }
 
         public void TimeAndScore(float time, uint month, float cash, float rent)
         {
+            // Proposal UI
+            if (lastProposal > 0) {
+                float factor = lastProposal / 100;
+                Vector2 shake = Random.insideUnitCircle * 9 * factor;
+                Value.transform.position = valuePosition
+                    + new Vector3(shake.x, shake.y, 0);
+            } else {
+                Value.transform.position = valuePosition;
+            }
+
             int seconds = Mathf.FloorToInt(time);
             float remainder = Mathf.Round((time % 1) * 100);
             Timer.text = seconds + ":" + remainder.ToString("00");
