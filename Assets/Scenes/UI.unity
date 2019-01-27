@@ -1269,6 +1269,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: ccda710cb932893ff879ffe1e5665121, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 01606666dd3f54493bcc89408973581d, type: 2}
     - target: {fileID: 400002, guid: ccda710cb932893ff879ffe1e5665121, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.1076
@@ -1293,10 +1297,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 2300000, guid: ccda710cb932893ff879ffe1e5665121, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 01606666dd3f54493bcc89408973581d, type: 2}
     - target: {fileID: 3300000, guid: ccda710cb932893ff879ffe1e5665121, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -2123,11 +2123,10 @@ MonoBehaviour:
   MoneyBubble: {fileID: 1830301750}
   HostilityBubble: {fileID: 1853807867}
   appearAt: -350
-  loadTime: 0.5
-  rejectTime: 0.5
-  acceptTime: 0.5
-  IconDisappearTime: 0.25
-
+  loadTime: 0.2
+  rejectTime: 0.15
+  acceptTime: 0.2
+  IconDisappearTime: 1
 --- !u!114 &1369853524
 MonoBehaviour:
   m_ObjectHideFlags: 0
