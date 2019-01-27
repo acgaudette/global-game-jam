@@ -43,9 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 131b4e4e3e7d33884b5f7dea303bc098, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tenantPrefab: {fileID: 2399925898005599490, guid: f523abc3976566de5a5b572e33156830,
-    type: 3}
-  spawnPoint: {fileID: 0}
   traitPool:
   - title: fish
     debugColor: {r: 0.17799926, g: 0.344155, b: 0.9433962, a: 1}
@@ -83,51 +80,32 @@ MonoBehaviour:
   - title: memes
     debugColor: {r: 0.6320754, g: 0.33392665, b: 0.621516, a: 1}
     hates: snakes
-  tenants: []
   timeLimit: 25
+  decidePause: 0.25
+  decidePunishPause: 0.75
+  startingRent: 200
+  rentIncreaseFactor: 0.8
+  startingCash: 0
+  startingCap: 2
+  worths: 00000000050000000a000000140000001e00000028000000320000003c00000046000000500000005a00000064000000
+  tenants: []
   timer: 0
   month: 1
   gameOver: 0
   deciding: 0
-  decidePause: 0.25
-  decidePunishPause: 0.75
   decidingTimer: 0
   proposal:
-    traits: []
+    trait:
+      data:
+        title: 
+        debugColor: {r: 1, g: 1, b: 1, a: 1}
+        hates: 
     worth: 0
-  startingRent: 200
-  startingCash: 0
-  rentIncreaseFactor: 0.8
-  cashDecreaseFactor: 0.8
   rent: 0
   cash: 0
-  startingCap: 2
-  maxFactor: 7
-  factorCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 2.493227
-      outSlope: 2.493227
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.0222826
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  worths: 00000000050000000a000000140000001e00000028000000320000003c00000046000000500000005a00000064000000
+  tenantPrefab: {fileID: 2399925898005599490, guid: f523abc3976566de5a5b572e33156830,
+    type: 3}
+  spawnPoint: {fileID: 0}
   scoreText: {fileID: 0}
   timerText: {fileID: 0}
   proposalText: {fileID: 0}
