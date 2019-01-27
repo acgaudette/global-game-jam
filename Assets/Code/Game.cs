@@ -220,6 +220,8 @@ namespace Gameplay {
             TraitData data = traitPool[randomIndex];
             bool like = Random.value > 0.5;
             Trait randomTrait = new Trait(data, like);
+
+            /*
             //float factor = Random.Range(1, maxFactor + 1);
             float factor = (maxFactor) * factorCurve.Evaluate(Random.value) + 1;
             factor = Mathf.Floor(factor);
@@ -227,7 +229,19 @@ namespace Gameplay {
                 factor--;
             }
 
-            TenantData proposal = new TenantData(randomTrait, factor);
+            factor *= 100; // $
+            */
+
+            uint count = 0;
+            foreach (var tenant in tenants) {
+                if (tenant.data.traits[0].data.title == data.title) {
+                    ++count;
+                }
+            }
+
+            int factor = Mathf.Min((int)count * 10, 100);
+
+            TenantData proposal = new TenantData(randomTrait, (uint)factor);
             return proposal;
         }
 
