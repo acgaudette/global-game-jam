@@ -42,6 +42,7 @@ namespace Gameplay {
         public Transform spawnPoint;
         public UIManager ui;
         public GameObject overlayObj;
+        public GameObject kioskObj;
 
         public createTenantAudio audioM;
 
@@ -62,6 +63,10 @@ namespace Gameplay {
             if (Input.GetButtonDown("Fire1")) {
                 overlay = !overlay;
                 overlayObj.SetActive(overlay);
+
+                if (overlay == false) {
+                    Restart();
+                }
             }
 
             /* Logic */
@@ -70,28 +75,13 @@ namespace Gameplay {
 
             // Reset game
             if (Input.GetKeyDown(KeyCode.R)) {
-                // Reset variables
-                timer = timeLimit;
-                month = 1;
-                cash = startingCash;
-                rent = startingRent;
-                proposal = GenerateProposal();
-                gameOver = false;
-                endingAudio.gameOver = false;
-
-                // Clear tenants
-                foreach (var tenant in tenants) {
-                    tenant.Kick();
-                }
-
-                tenants.Clear();
-
-                Debug.Log("Restarted game");
+                Restart();
             }
 
             if (gameOver) {
                 ui.Gameover();
                 endingAudio.gameOver = true;
+                kioskObj.SetActive(true);
                 return;
             }
 
@@ -222,8 +212,6 @@ namespace Gameplay {
 
         // Procedurally-generate new tenant proposal
         TenantData GenerateProposal() {
-
-
             //audSrc.pitch = Random.Range(.9f, 1.1f);
             audSrc.PlayOneShot(GetComponent<SoundEffects>().doorBell, volume);
 
@@ -245,6 +233,27 @@ namespace Gameplay {
             TenantData proposal = new TenantData(worth, data);
             ui.UpdateProposalUI(proposal);
             return proposal;
+        }
+
+        void Restart() {
+            // Reset variables
+            timer = timeLimit;
+            month = 1;
+            cash = startingCash;
+            rent = startingRent;
+            proposal = GenerateProposal();
+            gameOver = false;
+            endingAudio.gameOver = false;
+
+            // Clear tenants
+            foreach (var tenant in tenants) {
+                tenant.Kick();
+            }
+
+            tenants.Clear();
+            kioskObj.SetActive(false);
+
+            Debug.Log("Restarted game");
         }
     }
 }
