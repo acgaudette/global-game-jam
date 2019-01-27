@@ -10,8 +10,8 @@ namespace Gameplay
         public Text Rent;
         public Text Timer;
         public Text Month;
-        public GameObject AcceptButton;
-        public GameObject RejectButton;
+
+        public GameObject GameoverScreen;
 
         public IconShuffle Portrait;
         public Text PortraitName;
@@ -109,7 +109,12 @@ namespace Gameplay
             Timer.fontSize = 72;
             Timer.transform.position = timerPosition;
 
-            Timer.text = "GAME OVER";
+            Timer.text = "00 : 00";
+            if (!GameoverScreen.active)
+            {
+                GameoverScreen.GetComponent<GameoverAnim>().playAnim();
+                GameoverScreen.SetActive(true);
+            }
         }
     }
 }

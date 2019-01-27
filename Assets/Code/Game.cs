@@ -59,27 +59,29 @@ namespace Gameplay {
             kicked = false;
 
             // Reset game
-            if (Input.GetKeyDown(KeyCode.R)) {
-                // Reset variables
-                timer = timeLimit;
-                month = 1;
-                cash = startingCash;
-                rent = startingRent;
-                proposal = GenerateProposal();
-                gameOver = false;
-
-                // Clear tenants
-                foreach (var tenant in tenants) {
-                    tenant.Kick();
-                }
-
-                tenants.Clear();
-
-                Debug.Log("Restarted game");
-            }
 
             if (gameOver) {
                 ui.Gameover();
+                if (Input.anyKeyDown)
+                    {
+                        // Reset variables
+                        timer = timeLimit;
+                        month = 1;
+                        cash = startingCash;
+                        rent = startingRent;
+                        proposal = GenerateProposal();
+                        gameOver = false;
+
+                        // Clear tenants
+                        foreach (var tenant in tenants)
+                        {
+                            tenant.Kick();
+                        }
+                
+                        tenants.Clear();
+                        ui.GameoverScreen.SetActive(false);
+                    Debug.Log("Restarted game");
+                    }
                 return;
             }
 
