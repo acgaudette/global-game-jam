@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2399925898005599492}
   - component: {fileID: 3408994757428111227}
   m_Layer: 0
-  m_Name: Tenant
+  m_Name: DebugTenant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,16 +48,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data:
-    traits: []
-    valueFactor: 0
+    worth: 0
+    trait: {fileID: 0}
   wanderRange: 10
   waitTime: 5
   speed: 4
   exitSpeed: 10
+  targetReachRange: 0.4
   minX: -7
   maxX: 11.4
   minY: -6
-  maxY: -1
+  maxY: 2
   minZ: 0
   maxZ: 7
 --- !u!212 &2399925898005599489
