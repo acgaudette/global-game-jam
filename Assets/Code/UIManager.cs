@@ -2,70 +2,72 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
-public class UIManager : MonoBehaviour
+namespace Gameplay
 {
-    public Text Money;
-    public Text Rent;
-    public Text Timer;
-    public Text Month;
-    public GameObject Accept;
-    public GameObject Reject;
-
-    public IconShuffle Portrait;
-    public Text PortraitName;
-    public RawImage PortraitIcon;
-    public RawImage HateIcon;
-    public Text Value;
-
-    void UpdateProposalUI(TenantData proposal)
+    public class UIManager : MonoBehaviour
     {
-        PortraitIcon.texture = proposal.trait.Icon;
-        HateIcon.texture = proposal.trait.Hate.Icon;
-        Value.text = proposal.worth.ToString();
+        public Text Money;
+        public Text Rent;
+        public Text Timer;
+        public Text Month;
+        public GameObject AcceptButton;
+        public GameObject RejectButton;
 
-        PortraitName.text = proposal.trait.TraitName;
-        PortraitName.color = proposal.trait.TraitColor;
-        Portrait.ResetTenant();
-        Portrait.LoadTenant();
-    }
+        public IconShuffle Portrait;
+        public Text PortraitName;
+        public RawImage PortraitIcon;
+        public RawImage HateIcon;
+        public Text Value;
 
-    public void TimeAndScore(float time, int month, int cash, int rent)
-    {
-        int seconds = Mathf.FloorToInt(time);
-        float remainder = Mathf.Round((time % 1) * 100);
-        Timer.text = seconds + ":" + remainder.ToString("00");
+        public void UpdateProposalUI(TenantData proposal)
+        {
+            PortraitIcon.texture = proposal.trait.Icon;
+            HateIcon.texture = proposal.trait.Hate.Icon;
+            Value.text = proposal.worth.ToString();
 
-        //switch to text later;
-        Month.text = "Month: " + month.ToString();
+            PortraitName.text = proposal.trait.TraitName;
+            PortraitName.color = proposal.trait.TraitColor;
+            Portrait.ResetTenant();
+            Portrait.LoadTenant();
+        }
 
-        Money.text = cash.ToString();
+        public void TimeAndScore(float time, uint month, float cash, float rent)
+        {
+            int seconds = Mathf.FloorToInt(time);
+            float remainder = Mathf.Round((time % 1) * 100);
+            Timer.text = seconds + ":" + remainder.ToString("00");
 
-        Rent.text = rent.ToString();
-    }
+            //switch to text later;
+            Month.text = "Month: " + month.ToString();
 
-    public void Conflict()
-    {
-        proposalText.text = "CONFLICTS!";
-        //could change portrait.
-    }
+            Money.text = cash.ToString();
 
-    public void Accept()
-    {
-        PortraitName.text = "ACCEPTED!";
-        //Color?
-        Portrait.AcceptTenant();
+            Rent.text = rent.ToString();
+        }
 
-    }
+        public void Conflict()
+        {
+            PortraitName.text = "CONFLICTS!";
+            //could change portrait.
+        }
 
-    public void Reject()
-    {
-        PortraitName.text = "REJECTED!";
-        Portrait.RejectTenant();
-    }
+        public void Accept()
+        {
+            PortraitName.text = "ACCEPTED!";
+            //Color?
+            Portrait.AcceptTenant();
 
-    public void Gameover()
-    {
-        timerText.text = "GAME OVER";
+        }
+
+        public void Reject()
+        {
+            PortraitName.text = "REJECTED!";
+            Portrait.RejectTenant();
+        }
+
+        public void Gameover()
+        {
+            Timer.text = "GAME OVER";
+        }
     }
 }
