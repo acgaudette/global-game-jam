@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Dino
   m_EditorClassIdentifier: 
   TraitName: Dino
+  TraitID: 2
   Sprites: {fileID: 0}
   Icon: {fileID: 2800000, guid: 3fc49d9f4c8f940b893ea1cac36664cc, type: 3}
   Description: Loves Dino
-  Hate: {fileID: 11400000, guid: 7015d0a492abd7f4c8a0614f6f8972d2, type: 2}
+  Hate: {fileID: 11400000, guid: 48aab74a0dba543908a807d417aa2600, type: 2}
   HateSpeech: ?!
-  TraitColor: {r: 0.015691388, g: 0.6226415, b: 0, a: 1}
+  TraitColor: {r: 0.003610152, g: 0.8490566, b: 0, a: 1}

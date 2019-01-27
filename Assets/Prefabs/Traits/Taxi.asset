@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Taxi
   m_EditorClassIdentifier: 
   TraitName: Taxi
-  TraitID: 0
+  TraitID: 9
   Sprites: {fileID: 0}
   Icon: {fileID: 2800000, guid: b722e4948127b44309acad7135fb8d33, type: 3}
   Description: 
-  Hate: {fileID: 0}
+  Hate: {fileID: 11400000, guid: 17a4115fcbe38448ca770a3ac8f6a580, type: 2}
   HateSpeech: 
-  TraitColor: {r: 0, g: 0, b: 0, a: 0}
+  TraitColor: {r: 0.88350797, g: 0.9150943, b: 0, a: 1}

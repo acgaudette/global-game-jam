@@ -38,6 +38,8 @@ namespace Gameplay {
         public Transform spawnPoint;
         public UIManager ui;
 
+        public createTenantAudio audioM;
+
         void Awake() {
             timer = timeLimit;
             rent = startingRent;
@@ -105,6 +107,12 @@ namespace Gameplay {
                         spawnPoint.position,
                         Quaternion.identity,
                         this.transform
+                    );
+
+                    // Audio
+                    audioM.makeSource(
+                        proposal.trait.TraitID,
+                        tenant.transform
                     );
 
                     tenant.data = proposal;
