@@ -84,7 +84,7 @@ MonoBehaviour:
     debugColor: {r: 0.6320754, g: 0.33392665, b: 0.621516, a: 1}
     hates: snakes
   tenants: []
-  timeLimit: 20
+  timeLimit: 30
   timer: 0
   month: 1
   gameOver: 0
@@ -94,10 +94,10 @@ MonoBehaviour:
   decidingTimer: 0
   proposal:
     traits: []
-    valueFactor: 0
-  startingRent: 9000
-  startingCash: 500
-  rentIncreaseFactor: 1.5
+    worth: 0
+  startingRent: 300
+  startingCash: 0
+  rentIncreaseFactor: 0.8
   cashDecreaseFactor: 0.8
   rent: 0
   cash: 0
