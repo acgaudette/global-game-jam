@@ -1874,9 +1874,9 @@ MonoBehaviour:
   rightNode: {fileID: 218730958}
   bubbles: {fileID: 1211747246}
   appearAt: -350
-  loadspeed: 5
-  rejectspeed: 5
-  acceptspeed: 2
+  loadspeed: 11
+  rejectspeed: 7
+  acceptspeed: 3
 --- !u!114 &1369853524
 MonoBehaviour:
   m_ObjectHideFlags: 0
