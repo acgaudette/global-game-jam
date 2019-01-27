@@ -201,7 +201,6 @@ namespace Gameplay {
             int index = Mathf.Min((int)count, worths.Length - 1);
             uint worth = worths[index];
 
-            Debug.Log(worth);
             TenantData proposal = new TenantData(worth, data);
             ui.UpdateProposalUI(proposal);
             return proposal;
