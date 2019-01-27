@@ -21,10 +21,14 @@ public class IconShuffle : MonoBehaviour
     public float rejectTime;
     public float acceptTime;
     public float IconDisappearTime;
+    public float IconAppearTime;
     float elapsedtime;
     float animFraction;
     Vector3 moneyScale;
     Vector3 hostilityScale;
+    Vector3 startHostileAngle;
+    Vector3 startMoneyAngle;
+    Vector3 endAngle;
 
     private void Start()
     {
@@ -33,6 +37,9 @@ public class IconShuffle : MonoBehaviour
         hostilityScale = HostilityBubble.transform.localScale;
         MoneyBubble.transform.localScale = Vector3.zero;
         HostilityBubble.transform.localScale = Vector3.zero;
+        startMoneyAngle = new Vector3(0.0f, 0.0f, 90f);
+        startHostileAngle = new Vector3(0.0f, 0.0f, -90.0f);
+        endAngle = new Vector3(0.0f, 0.0f, 0.0f);
     }
 
     private void Update()
@@ -43,8 +50,11 @@ public class IconShuffle : MonoBehaviour
                 elapsedtime += Time.deltaTime;
                 animFraction = elapsedtime / loadTime;
                 gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, middleNode.position, animFraction);
+                animFraction = elapsedtime / IconAppearTime;
                 MoneyBubble.transform.localScale = Vector3.Slerp(Vector3.zero, moneyScale, animFraction);
+                MoneyBubble.transform.localEulerAngles = Vector3.Slerp(startMoneyAngle, endAngle, animFraction);
                 HostilityBubble.transform.localScale = Vector3.Slerp(Vector3.zero, hostilityScale, animFraction);
+                HostilityBubble.transform.localEulerAngles = Vector3.Slerp(startHostileAngle, endAngle, animFraction);
                 break;
             case PortraitState.accept:
                 elapsedtime += Time.deltaTime;
@@ -53,6 +63,7 @@ public class IconShuffle : MonoBehaviour
                 animFraction = elapsedtime / IconDisappearTime;
                 MoneyBubble.transform.localScale = Vector3.Slerp(moneyScale, Vector3.zero, animFraction);
                 HostilityBubble.transform.localScale = Vector3.Slerp(hostilityScale, Vector3.zero, animFraction);
+
                 break;
             case PortraitState.reject:
                 elapsedtime += Time.deltaTime;
