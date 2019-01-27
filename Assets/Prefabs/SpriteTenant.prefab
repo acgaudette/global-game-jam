@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2853766348110457853}
   - component: {fileID: 8358514599636896204}
   m_Layer: 0
-  m_Name: Tenant_Test
+  m_Name: SpriteTenant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -171,7 +171,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3944780515396933680
 Transform:
   m_ObjectHideFlags: 0
@@ -181,7 +181,7 @@ Transform:
   m_GameObject: {fileID: 6983817085843601781}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.5, z: -0.001}
-  m_LocalScale: {x: 0.6666667, y: 0.28571427, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2399925898005599491}
   m_RootOrder: 0
@@ -193,7 +193,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6983817085843601781}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -231,7 +231,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6983817085843601781}
-  m_Text: 
+  m_Text: 1x
   m_OffsetZ: 0
   m_CharacterSize: 0.1
   m_LineSpacing: 1
