@@ -107,29 +107,7 @@ namespace Gameplay
 
             // Debug label
             var label = transform.GetChild(0).GetComponent<TextMesh>();
-            /*
-            if (data.valueFactor > 1) {
-                label.text = data.valueFactor + "x";
-                    //+ "\n" + (data.traits[0].like ? ":)" : ":(");
-            } else {
-                label.text = "";
-            }
-            */
-
             label.text = "$" + data.worth;
-        }
-
-        void OnCollisionEnter(Collision collision)
-        { 
-            /*
-            if (collision.gameObject.CompareTag("Tenant"))
-            {
-                if (collision.gameObject.transform.z > transform.z)
-                {
-
-                }
-            }
-            */
         }
     }
 
