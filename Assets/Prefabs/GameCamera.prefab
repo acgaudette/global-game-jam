@@ -59,7 +59,7 @@ Camera:
   far clip plane: 256
   field of view: 27
   orthographic: 1
-  orthographic size: 4.5
+  orthographic size: 4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -96,13 +96,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   game: {fileID: 0}
-  damping: 0.1
-  minX: -0.5
-  maxX: 1.8
-  minY: -0.1
-  maxY: 0
+  damping: 1
+  minX: -1
+  maxX: 2.5
+  minY: -0.5
+  maxY: 0.5
   shakeAmount: {x: 0.4, y: 0.2}
-  shakeTime: 0.5
+  shakeTime: 1
   shaking: 0
   shake: {x: 0, y: 0, z: 0}
   shakeTimer: 0
