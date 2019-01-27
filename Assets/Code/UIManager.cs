@@ -20,6 +20,8 @@ namespace Gameplay
         public Text Value;
         public Color defaultTextColor = Color.white;
         public Color warnTextColor = Color.red;
+        public int timerScale;
+        public int timerWarnScale;
 
         Vector3 timerPosition;
         Vector3 valuePosition;
@@ -71,7 +73,7 @@ namespace Gameplay
 
             if (seconds < 5) {
                 Timer.color = warnTextColor;
-                Timer.fontSize = 90;
+                Timer.fontSize = timerWarnScale;
 
                 // Shake
                 Vector2 shake = Random.insideUnitCircle * 8;
@@ -79,7 +81,7 @@ namespace Gameplay
                     + new Vector3(shake.x, shake.y, 0);
             } else {
                 Timer.color = defaultTextColor;
-                Timer.fontSize = 72;
+                Timer.fontSize = timerScale;
                 Timer.transform.position = timerPosition;
             }
         }
@@ -108,7 +110,7 @@ namespace Gameplay
         {
             // Reset timer data
             //Timer.color = defaultTextColor;
-            Timer.fontSize = 72;
+            Timer.fontSize = timerScale;
             Timer.transform.position = timerPosition;
 
             Timer.text = "GAME OVER";
