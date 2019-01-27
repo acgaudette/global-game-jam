@@ -15,8 +15,7 @@ MonoBehaviour:
   TraitName: Streamer
   TraitID: 8
   Sprites: {fileID: 2800000, guid: 9930738104d3f4fd9833fdbb7b5b0efd, type: 3}
-  Icon: {fileID: 0}
-  Description: 
+  Icon: {fileID: 2800000, guid: 9930738104d3f4fd9833fdbb7b5b0efd, type: 3}
+  SpriteIcon: {fileID: 2800000, guid: b93aa23b2a2004a92b17b90637e5564f, type: 3}
   Hate: {fileID: 11400000, guid: 18fe605b6018c4f60acbd5f51d81ed6d, type: 2}
-  HateSpeech: 
   TraitColor: {r: 0.8018868, g: 0, b: 0.67832375, a: 1}

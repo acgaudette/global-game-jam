@@ -22,7 +22,7 @@ namespace Gameplay
         public void UpdateProposalUI(TenantData proposal)
         {
             PortraitIcon.texture = proposal.trait.Icon;
-            HateIcon.texture = proposal.trait.Hate.Icon;
+            HateIcon.texture = proposal.trait.Hate.SpriteIcon;
             Value.text = "$" + proposal.worth.ToString();
 
             PortraitName.text = proposal.trait.TraitName;

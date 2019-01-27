@@ -16,7 +16,6 @@ MonoBehaviour:
   TraitID: 6
   Sprites: {fileID: 0}
   Icon: {fileID: 2800000, guid: f9a69bf5757ce4d0eb261b5955b3fe68, type: 3}
-  Description: 
+  SpriteIcon: {fileID: 2800000, guid: af84693542e32420dbce9115a83cff78, type: 3}
   Hate: {fileID: 11400000, guid: d37db577adf664bd89474240c2e82da0, type: 2}
-  HateSpeech: 
   TraitColor: {r: 1, g: 0.80800456, b: 0.5566038, a: 1}
