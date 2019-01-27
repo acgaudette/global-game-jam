@@ -16,6 +16,8 @@ public class GameoverAnim : MonoBehaviour
     Vector3 GameRotation;
     Vector3 OverRotation;
     Vector3 larger;
+    Vector3 trypos;
+    Vector3 newpos;
     
     public void Start()
     {
@@ -24,12 +26,14 @@ public class GameoverAnim : MonoBehaviour
         GameRotation = new Vector3(0.0f, 0.0f, -25f);
         OverRotation = new Vector3(0.0f, 0.0f, 25f);
         larger = new Vector3(1.2f, 1.2f, 1.2f);
+        trypos = Tryagain.transform.position;
+        newpos = new Vector3(trypos.x, trypos.y - 10f, trypos.z);
     }
 
     public void playAnim()
     {
         elapsed = 0.0f;
-        endingAudio.gameOver = true;
+        //endingAudio.gameOver = true;
         Game.transform.localScale = Vector3.zero;
         Over.transform.localScale = Vector3.zero;
         Tryagain.transform.localScale = Vector3.zero;
@@ -54,6 +58,8 @@ public class GameoverAnim : MonoBehaviour
         {
             Game.transform.localScale = Vector3.Slerp(final, larger, Mathf.Cos(animFraction));
             Over.transform.localScale = Vector3.Slerp(final, larger, Mathf.Cos(animFraction));
+            Dash.transform.localScale = Vector3.Slerp(final, larger, Mathf.Cos(animFraction));
+            Tryagain.transform.position = Vector3.Slerp(trypos, newpos, Mathf.Cos(animFraction));
         }
     }
 }
