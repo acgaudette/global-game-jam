@@ -185,7 +185,6 @@ namespace Gameplay {
 
             /* UI */
             ui.TimeAndScore(timer, month, cash, rent);
-            Debug.Log(rent);
         }
 
         // Procedurally-generate new tenant proposal
