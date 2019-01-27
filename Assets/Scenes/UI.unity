@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 16109027}
   - component: {fileID: 16109026}
   m_Layer: 5
-  m_Name: brick (2)
+  m_Name: brickbrick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1523,7 +1523,7 @@ MonoBehaviour:
   m_FillMethod: 0
   m_FillAmount: 0.08
   m_FillClockwise: 1
-  m_FillOrigin: 1
+  m_FillOrigin: 0
   m_UseSpriteMesh: 0
 --- !u!222 &501520089
 CanvasRenderer:
@@ -2001,6 +2001,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: ccda710cb932893ff879ffe1e5665121, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 01606666dd3f54493bcc89408973581d, type: 2}
     - target: {fileID: 400002, guid: ccda710cb932893ff879ffe1e5665121, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.1076
@@ -2025,10 +2029,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 2300000, guid: ccda710cb932893ff879ffe1e5665121, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 01606666dd3f54493bcc89408973581d, type: 2}
     - target: {fileID: 3300000, guid: ccda710cb932893ff879ffe1e5665121, type: 3}
       propertyPath: m_Mesh
       value: 
