@@ -27,6 +27,11 @@ namespace Gameplay
         Vector3 valuePosition;
         float lastProposal = 0;
 
+        public GameObject gover;
+        public GameObject overlay;
+        public GameObject story;
+        public GameObject instr;
+
         void Start() {
             timerPosition = Timer.transform.position;
             //valuePosition = Value.transform.position;
@@ -114,6 +119,27 @@ namespace Gameplay
             Timer.transform.position = timerPosition;
 
             Timer.text = "GAME OVER";
+            if (!gover.activeSelf)
+            {
+                gover.GetComponent<Gameover>().playAnim();
+                gover.SetActive(true);
+            }
+        }
+
+        public void switchOverlay()
+        {
+            if (story.activeSelf)
+            {
+                story.SetActive(false);
+                instr.SetActive(true);
+                //instr.GetComponent<InstructionAnim>().playAnim();
+            }
+            else
+            {
+                story.SetActive(true);
+                instr.SetActive(false);
+                //story.GetComponent<InstructionAnim>().playAnim();
+            }
         }
     }
 }

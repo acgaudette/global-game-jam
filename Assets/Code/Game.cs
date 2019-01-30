@@ -28,7 +28,7 @@ namespace Gameplay {
         public float rent;
         public float cash;
         public bool kicked = false;
-        public bool overlay = false;
+        bool overlay = true;
 
         public float pitchRamp;
         public float volume;
@@ -42,7 +42,6 @@ namespace Gameplay {
         public Transform spawnPoint;
         public UIManager ui;
         public GameObject overlayObj;
-        public GameObject kioskObj;
 
         public createTenantAudio audioM;
 
@@ -61,12 +60,28 @@ namespace Gameplay {
 
             //if (Input.GetKeyDown(KeyCode.Space)) {
             if (Input.GetButtonDown("Fire1")) {
-                overlay = !overlay;
-                overlayObj.SetActive(overlay);
-
                 if (overlay == false) {
                     Restart();
+                    overlay = true;
+                    overlayObj.SetActive(overlay);
                 }
+            }
+
+            if (overlay)
+            {
+                if (Input.GetKeyDown(KeyCode.LeftArrow))
+                {
+                    ui.switchOverlay();
+                }
+                else if (Input.GetKeyDown(KeyCode.RightArrow))
+                {
+                    overlay = false;
+                    overlayObj.SetActive(overlay);
+                    ui.story.SetActive(true);
+                    ui.instr.SetActive(false);
+                    Restart();
+                }
+                return;
             }
 
             /* Logic */
@@ -81,7 +96,6 @@ namespace Gameplay {
             if (gameOver) {
                 ui.Gameover();
                 endingAudio.gameOver = true;
-                kioskObj.SetActive(true);
                 return;
             }
 
@@ -251,7 +265,7 @@ namespace Gameplay {
             }
 
             tenants.Clear();
-            kioskObj.SetActive(false);
+            ui.gover.SetActive(false);
 
             Debug.Log("Restarted game");
         }
